@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{866F32D9-0E21-4133-AD7A-8602D38A9556}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "View", "View", "{88267641-3FE3-4AE8-B956-A051285ABAF8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{7D19CBAC-422C-4D2C-B79B-7863E995BAE1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{F75353E2-C8DA-40B2-A746-E9E4D7BE15FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NiboChallenge.UI.Web", "NiboChallenge.UI.Web\NiboChallenge.UI.Web.csproj", "{EDC476BC-2666-4294-A8D6-2255C5617806}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NiboChallenger.Infra", "NiboChallenger.Infra\NiboChallenger.Infra.csproj", "{352FF7A9-A5A6-4B36-BB87-BAA457AAB273}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NiboChallenge.Domain", "NiboChallenge.Domain\NiboChallenge.Domain.csproj", "{541AFFAA-3390-46DA-BF75-16FF3D2133FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NiboChallenger.Application", "NiboChallenger.Application\NiboChallenger.Application.csproj", "{12F72435-D5CA-4ECB-BAD7-23E353E59795}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EDC476BC-2666-4294-A8D6-2255C5617806}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDC476BC-2666-4294-A8D6-2255C5617806}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDC476BC-2666-4294-A8D6-2255C5617806}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDC476BC-2666-4294-A8D6-2255C5617806}.Release|Any CPU.Build.0 = Release|Any CPU
+		{352FF7A9-A5A6-4B36-BB87-BAA457AAB273}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{352FF7A9-A5A6-4B36-BB87-BAA457AAB273}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{352FF7A9-A5A6-4B36-BB87-BAA457AAB273}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{352FF7A9-A5A6-4B36-BB87-BAA457AAB273}.Release|Any CPU.Build.0 = Release|Any CPU
+		{541AFFAA-3390-46DA-BF75-16FF3D2133FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{541AFFAA-3390-46DA-BF75-16FF3D2133FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{541AFFAA-3390-46DA-BF75-16FF3D2133FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{541AFFAA-3390-46DA-BF75-16FF3D2133FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12F72435-D5CA-4ECB-BAD7-23E353E59795}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12F72435-D5CA-4ECB-BAD7-23E353E59795}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12F72435-D5CA-4ECB-BAD7-23E353E59795}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12F72435-D5CA-4ECB-BAD7-23E353E59795}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EDC476BC-2666-4294-A8D6-2255C5617806} = {88267641-3FE3-4AE8-B956-A051285ABAF8}
+		{352FF7A9-A5A6-4B36-BB87-BAA457AAB273} = {866F32D9-0E21-4133-AD7A-8602D38A9556}
+		{541AFFAA-3390-46DA-BF75-16FF3D2133FD} = {F75353E2-C8DA-40B2-A746-E9E4D7BE15FF}
+		{12F72435-D5CA-4ECB-BAD7-23E353E59795} = {7D19CBAC-422C-4D2C-B79B-7863E995BAE1}
+	EndGlobalSection
+EndGlobal
