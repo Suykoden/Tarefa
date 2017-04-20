@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using NiboChallenge.Domain.Entities;
 using NiboChallenger.Application.Interface;
 
 namespace NiboChallenge.UI.Controllers
@@ -29,8 +30,12 @@ namespace NiboChallenge.UI.Controllers
         }
 
         // POST: api/Jogadores
-        public void Post([FromBody]string value)
+        public void Post([FromBody]Jogador jogador)
         {
+            jogador.Id = Guid.NewGuid();
+            jogador.Ativo = true;
+            jogador.DataCadastro = DateTime.Now;
+            _jogadorAppService.Add(jogador);
         }
 
         // PUT: api/Jogadores/5
