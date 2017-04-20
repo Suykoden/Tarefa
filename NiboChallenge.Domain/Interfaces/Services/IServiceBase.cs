@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NiboChallenge.Domain.Interfaces.Repositories
+namespace NiboChallenge.Domain.Interfaces.Services
 {
-    public interface IRepositoryBase<TEntity> where TEntity : class
+    public interface IServicoBase<TEntity> where TEntity : class
     {
         void Add(TEntity obj);
         TEntity GetById(int id);
@@ -14,5 +14,6 @@ namespace NiboChallenge.Domain.Interfaces.Repositories
         void Update(TEntity obj);
         void Remove(TEntity obj);
        
+
     }
 }

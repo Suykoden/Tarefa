@@ -7,10 +7,14 @@ using NiboChallenge.Domain.EntitiesBase;
 
 namespace NiboChallenge.Domain.Entities
 {
-    public class Jogador : EntityWithCodeAndName
+    public class Jogador : EntityWithName
     {
+        public string Apelido { get; set; }
         public int Vitorias { get; set; }
         public int Derrotas { get; set; }
         public bool Ativo { get; set; }
+        public DateTime DataCadastro { get; set; }
+        public int Idade { get; set; }
+        public string Email { get; set; }
     }
 }

@@ -10,9 +10,14 @@ namespace NiboChallenge.UI.Controllers
     {
         public ActionResult Index()
         {
-          //  ViewBag.Title = "Home Page";
+            return View();
+        }
 
+
+        public ActionResult CadastroJogador()
+        {
             return View();
         }
     }
 }
+

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NiboChallenge.Domain.Interfaces.Repositories
+namespace NiboChallenger.Application.Interface
 {
-    public interface IRepositoryBase<TEntity> where TEntity : class
+   public  interface IAppServiceBase<TEntity> where TEntity: class 
     {
         void Add(TEntity obj);
         TEntity GetById(int id);
