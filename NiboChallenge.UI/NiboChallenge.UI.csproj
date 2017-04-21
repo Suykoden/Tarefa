@@ -210,7 +210,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\JogadoresController.cs" />
+    <Compile Include="Controllers\CompetidorController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -218,7 +218,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AngularControllers\CadastroUsuarioController.js" />
+    <Content Include="AngularControllers\CadastroCompetidorController.js" />
     <Content Include="AngularControllers\js\angular-route.js" />
     <Content Include="AngularControllers\js\angular-route.min.js" />
     <Content Include="AngularControllers\js\angular-sanitize.js" />
@@ -328,7 +328,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\MenuLateral.cshtml" />
-    <Content Include="Views\Home\CadastroJogador.cshtml" />
+    <Content Include="Views\Home\CadastroCompetidor.cshtml" />
     <Content Include="Views\Shared\ApplicationName.cshtml" />
   </ItemGroup>
   <ItemGroup>

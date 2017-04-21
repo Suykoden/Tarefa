@@ -7,11 +7,10 @@ using NiboChallenge.Domain.EntitiesBase;
 
 namespace NiboChallenge.Domain.Entities
 {
-    public class Golpe : EntityWithCodeAndName
+    public class Habilidade : EntityWithName
     {
-        public int Dano { get; set; }
+      
         public string Detalhe { get; set; }
-        public string Efeito { get; set; }
+
     }
 }
-

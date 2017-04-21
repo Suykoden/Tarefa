@@ -92,11 +92,11 @@ namespace NiboChallenge.UI.App_Start
 
             //Domain
             kernel.Bind(typeof(IServicoBase<>)).To(typeof(ServiceBase<>));
-            kernel.Bind<IJogadorService>().To<JogadorService>();
+            kernel.Bind<IJogadorService>().To<CompetidorService>();
 
             //Repositories
             kernel.Bind(typeof(IRepositoryBase<>)).To(typeof(RepositoryBase<>));
-            kernel.Bind<IJogadorRepository>().To<JogadorRepository>();
+            kernel.Bind<ICompetidorRepository>().To<CompetidorRepository>();
            
         }
     }

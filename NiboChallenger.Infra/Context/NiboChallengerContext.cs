@@ -17,13 +17,12 @@ namespace NiboChallenger.Infra.Context
         {
 
         }
-        public DbSet<Batalha> Batalha { get; set; }
-        public DbSet<BatalhaCampeao> BatalhaCampeao { get; set; }
-        public DbSet<Campeao> Campeao { get; set; }
+       
         public DbSet<ClasseCampeao> ClasseCampeao { get; set; }
         public DbSet<Foto> Foto { get; set; }
-        public DbSet<Golpe> Golpe { get; set; }
-        public DbSet<Jogador> Jogadore { get; set; }
+        public DbSet<Competidor> Competidor { get; set; }
+        public DbSet<Habilidade> Habilidade { get; set; }
+        public DbSet<Time> Time { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

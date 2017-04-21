@@ -44,22 +44,17 @@
     <Compile Include="EntitiesBase\EntityWithCode.cs" />
     <Compile Include="EntitiesBase\EntityWithCodeAndName.cs" />
     <Compile Include="EntitiesBase\EntityWithName.cs" />
-    <Compile Include="Entities\BatalhaCampeao.cs" />
-    <Compile Include="Entities\Batalha.cs" />
     <Compile Include="Entities\Foto.cs" />
-    <Compile Include="Entities\Golpe.cs" />
-    <Compile Include="Entities\Campeao.cs" />
-    <Compile Include="Entities\Jogador.cs" />
+    <Compile Include="Entities\Competidor.cs" />
     <Compile Include="Entities\ClasseCampeao.cs" />
-    <Compile Include="Entities\JogadorCampeao.cs" />
     <Compile Include="Entities\Time.cs" />
-    <Compile Include="Entities\TimeJogador.cs" />
-    <Compile Include="Interfaces\Repositories\IJogadorRepository.cs" />
+    <Compile Include="Entities\Habilidade.cs" />
+    <Compile Include="Interfaces\Repositories\ICompetidorRepository.cs" />
     <Compile Include="Interfaces\Repositories\IRepositoryBase.cs" />
     <Compile Include="Interfaces\Services\IJogadorService.cs" />
     <Compile Include="Interfaces\Services\IServiceBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\JogadorService.cs" />
+    <Compile Include="Services\CompetidorService.cs" />
     <Compile Include="Services\ServiceBase.cs" />
   </ItemGroup>
   <ItemGroup />

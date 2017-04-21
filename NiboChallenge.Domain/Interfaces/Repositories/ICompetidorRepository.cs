@@ -7,7 +7,7 @@ using NiboChallenge.Domain.Entities;
 
 namespace NiboChallenge.Domain.Interfaces.Repositories
 {
-    public interface IJogadorRepository : IRepositoryBase<Jogador>
+    public interface ICompetidorRepository : IRepositoryBase<Competidor>
     {
 
     }

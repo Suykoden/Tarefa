@@ -7,7 +7,7 @@ using NiboChallenge.Domain.EntitiesBase;
 
 namespace NiboChallenge.Domain.Entities
 {
-    public class ClasseCampeao : EntityWithCodeAndName
+    public class ClasseCampeao : EntityWithName
     {
 
     }

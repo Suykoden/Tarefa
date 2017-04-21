@@ -9,11 +9,11 @@ using NiboChallenge.Domain.Interfaces.Services;
 
 namespace NiboChallenge.Domain.Services
 {
-    public class JogadorService : ServiceBase<Jogador>, IJogadorService
+    public class CompetidorService : ServiceBase<Competidor>, IJogadorService
     {
-        private IJogadorRepository _jogadorRepository;
+        private ICompetidorRepository _jogadorRepository;
 
-        public JogadorService(IJogadorRepository jogadorRepository)
+        public CompetidorService(ICompetidorRepository jogadorRepository)
             :base(jogadorRepository)
         {
             _jogadorRepository = jogadorRepository;

@@ -7,7 +7,7 @@ using NiboChallenge.Domain.Entities;
 
 namespace NiboChallenger.Application.Interface
 {
-    public interface IJogadorAppService : IAppServiceBase<Jogador>
+    public interface IJogadorAppService : IAppServiceBase<Competidor>
     {
         //Damasio: Especialized routines here
     }

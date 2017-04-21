@@ -8,7 +8,7 @@ using NiboChallenge.Domain.Interfaces.Repositories;
 
 namespace NiboChallenger.Infra.Repositories
 {
-    public class JogadorRepository : RepositoryBase<Jogador>, IJogadorRepository
+    public class CompetidorRepository : RepositoryBase<Competidor>, ICompetidorRepository
     {
 
     }

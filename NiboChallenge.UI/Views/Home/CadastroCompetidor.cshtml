@@ -58,7 +58,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Cadastro de jogadores
+                            Cadastro de competidores
                         </h1>
                     </div>
                 </div>
@@ -66,19 +66,21 @@
                 <div class="row" ng-controller="HttpGetController">
                     <div class="col-lg-2">
                         <form name="AddPlayer" ng-submit="SendData()">
-                        
-                                <label>Nome</label>
-                                <input class="form-control" placeholder="Nome do jogador" ng-model="Jogador.Nome">
-                                <br />
-                                <label>Apelido</label>
-                                <input class="form-control" placeholder="Apelido" ng-model="Jogador.Apelido">
-                                <br />
-                                <label>Idade</label>
-                                <input class="form-control" placeholder="Idade"ng-model="Jogador.Idade">
-                                <br />
-                                <label>Email</label>
-                                <input class="form-control" placeholder="SeuEmail@email.com" ng-model="Jogador.Email" />
-                            
+
+                            <label>Nome</label>
+                            <input class="form-control" placeholder="Nome do jogador" ng-model="Competidor.Nome">
+                            <br />
+                            <label>Time</label>
+                            <input class="form-control" placeholder="Time" ng-model="Competidor.Time">
+                            <br />
+                            <label>Classe</label>
+                            <input class="form-control" placeholder="Idade" ng-model="Competidor.Classe">
+                            <br />
+                            <label>Primeira habilidade</label>
+                            <input class="form-control" placeholder="SeuEmail@email.com" ng-model="Competidor.PrimeiraHabilidade" />
+                            <label>Primeira habilidade</label>
+                            <input class="form-control" placeholder="SeuEmail@email.com" ng-model="Competidor.SegundaHabilidade" />
+
                             <div class="col-lg-offset-4">
                                 <button type="submit" class="btn btn-primary">Gravar</button>
                             </div>
@@ -166,7 +168,7 @@
         <script src="/AngularControllers/js/angular.min.js"></script>
         <script src="/AngularControllers/js/angular-route.min.js"></script>
         <script src="/AngularControllers/CadastroUsuarioController.js"></script>
-       
+
 
         <!-- Bootstrap Core JavaScript -->
         <script src="/js/bootstrap.min.js"></script>

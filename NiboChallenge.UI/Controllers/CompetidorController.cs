@@ -9,11 +9,11 @@ using NiboChallenger.Application.Interface;
 
 namespace NiboChallenge.UI.Controllers
 {
-    public class JogadoresController : ApiController
+    public class CompetidorController : ApiController
     {
         private readonly IJogadorAppService _jogadorAppService;
 
-        public JogadoresController(IJogadorAppService jogadorAppService)
+        public CompetidorController(IJogadorAppService jogadorAppService)
         {
             _jogadorAppService = jogadorAppService;
         }
@@ -30,7 +30,7 @@ namespace NiboChallenge.UI.Controllers
         }
 
         // POST: api/Jogadores
-        public void Post(Jogador jogador)
+        public void Post(Competidor jogador)
         {
             jogador.Id = Guid.NewGuid();
             jogador.Ativo = true;

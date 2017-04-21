@@ -7,7 +7,7 @@ using NiboChallenge.Domain.Entities;
 
 namespace NiboChallenge.Domain.Interfaces.Services
 {
-    public interface IJogadorService : IServicoBase<Jogador>
+    public interface IJogadorService : IServicoBase<Competidor>
     {
 
     }
