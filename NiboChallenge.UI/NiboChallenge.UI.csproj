@@ -218,7 +218,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AngularControllers\app.module.js" />
     <Content Include="AngularControllers\CadastroUsuarioController.js" />
     <Content Include="AngularControllers\js\angular-route.js" />
     <Content Include="AngularControllers\js\angular-route.min.js" />

@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html ng-app="app" lang="en">
 
 <head>
 
@@ -22,7 +22,7 @@
 
     <!-- Custom Fonts -->
     <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
+    >
 </head>
 
 <body>
@@ -63,24 +63,27 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row" ng-controller="HttpGetController">
                     <div class="col-lg-2">
-                        <div class="form-group">
-                            <label>Nome</label>
-                            <input class="form-control" placeholder="Nome do jogador">
-                            <br />
-                            <label>Apelido</label>
-                            <input class="form-control" placeholder="Apelido">
-                            <br />
-                            <label>Idade</label>
-                            <input class="form-control" placeholder="Idade">
-                            <br />
-                            <label>Email</label>
-                            <input class="form-control" placeholder="SeuEmail@email.com" />
-                        </div>
-                        <div class="col-lg-offset-4">
-                            <button type="submit" class="btn btn-primary">Gravar</button>
-                        </div>
+                        <form name="AddPlayer" ng-submit="SendData()">
+                        
+                                <label>Nome</label>
+                                <input class="form-control" placeholder="Nome do jogador" ng-model="Jogador.Nome">
+                                <br />
+                                <label>Apelido</label>
+                                <input class="form-control" placeholder="Apelido" ng-model="Jogador.Apelido">
+                                <br />
+                                <label>Idade</label>
+                                <input class="form-control" placeholder="Idade"ng-model="Jogador.Idade">
+                                <br />
+                                <label>Email</label>
+                                <input class="form-control" placeholder="SeuEmail@email.com" ng-model="Jogador.Email" />
+                            
+                            <div class="col-lg-offset-4">
+                                <button type="submit" class="btn btn-primary">Gravar</button>
+                            </div>
+                            {{ PostDataResponse }}
+                        </form>
 
                     </div>
 
@@ -160,6 +163,10 @@
         <!-- /#wrapper -->
         <!-- jQuery -->
         <script src="/js/jquery.js"></script>
+        <script src="/AngularControllers/js/angular.min.js"></script>
+        <script src="/AngularControllers/js/angular-route.min.js"></script>
+        <script src="/AngularControllers/CadastroUsuarioController.js"></script>
+       
 
         <!-- Bootstrap Core JavaScript -->
         <script src="/js/bootstrap.min.js"></script>

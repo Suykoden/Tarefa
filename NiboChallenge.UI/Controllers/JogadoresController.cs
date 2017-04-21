@@ -30,7 +30,7 @@ namespace NiboChallenge.UI.Controllers
         }
 
         // POST: api/Jogadores
-        public void Post([FromBody]Jogador jogador)
+        public void Post(Jogador jogador)
         {
             jogador.Id = Guid.NewGuid();
             jogador.Ativo = true;
