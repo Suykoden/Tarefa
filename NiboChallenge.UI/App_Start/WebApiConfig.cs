@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using NiboChallenge.UI.App_Start;
 
 namespace NiboChallenge.UI
 {
@@ -19,6 +20,7 @@ namespace NiboChallenge.UI
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+            config.DependencyResolver = new NinjectDependencyResolver(NinjectWebCommon.CreateKernelForWebApi());
         }
     }
 }
