@@ -64,7 +64,13 @@
                                 <label>Nome</label>
                                 <input class="form-control" placeholder="Nome do jogador" ng-model="Competidor.Nome">
                                 <br />
-                               
+                                <div class="dropdown">
+                                    <label>Classe</label>
+                                    <select class="form-control" style="overflow: hidden" name="ClasseCampeao" id="ClasseCampeao" ng-model="Competidor.ClasseCampeaoId" ng-init="CarregaClasses()">
+                                        <option value="">Selecione </option>
+                                        <option ng-repeat="classes in ClasseCampeao" value="{{classes.Id}}">{{classes.Nome}} </option>
+                                    </select>
+                                </div>
                                 <label>Primeira habilidade</label>
                                 <input class="form-control" placeholder="Seleciona a habilidade" ng-model="Competidor.PrimeiraHabilidade" />
                                 <br />
@@ -153,7 +159,7 @@
         <script src="/AngularControllers/js/angular.min.js"></script>
         <script src="/AngularControllers/js/angular-route.min.js"></script>
         <script src="~/AngularControllers/js/CadastroCompetidorController.js"></script>
-       
+
         <!-- Bootstrap Core JavaScript -->
         <script src="/js/bootstrap.min.js"></script>
 

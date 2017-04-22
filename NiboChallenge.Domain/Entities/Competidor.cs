@@ -14,7 +14,7 @@ namespace NiboChallenge.Domain.Entities
         public bool Ativo { get; set; }
         public DateTime DataCadastro { get; set; }
         public Guid ClasseCampeaoId { get; set; }
-        public ClasseCampeao classseCampeao { get; set; }
+        public ClasseCampeao ClasseCampeao { get; set; }
         public Guid PrimeiraHabilidadeId { get; set; }
         public Habilidade PrimeiraHabilidade { get; set; }
         public Guid SegundaHabilidadeId { get; set; }
