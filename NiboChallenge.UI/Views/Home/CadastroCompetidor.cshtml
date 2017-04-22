@@ -71,11 +71,22 @@
                                         <option ng-repeat="classes in ClasseCampeao" value="{{classes.Id}}">{{classes.Nome}} </option>
                                     </select>
                                 </div>
-                                <label>Primeira habilidade</label>
-                                <input class="form-control" placeholder="Seleciona a habilidade" ng-model="Competidor.PrimeiraHabilidade" />
                                 <br />
-                                <label>Segunda habilidade</label>
-                                <input class="form-control" placeholder="Seleciona a habilidade" ng-model="Competidor.SegundaHabilidade" />
+                                <div class="dropdown">
+                                    <label>Primeira habilidade</label>
+                                    <select class="form-control" style="overflow: hidden" name="ClasseCampeao" id="ClasseCampeao" ng-model="Competidor.ClasseCampeaoId" ng-init="CarregaClasses()">
+                                        <option value="">Selecione </option>
+                                        <option ng-repeat="classes in ClasseCampeao" value="{{classes.Id}}">{{classes.Nome}} </option>
+                                    </select>
+                                </div>
+                                <br />
+                                <div class="dropdown">
+                                    <label>Segunda habilidade</label>
+                                    <select class="form-control" style="overflow: hidden" name="ClasseCampeao" id="ClasseCampeao" ng-model="Competidor.ClasseCampeaoId" ng-init="CarregaClasses()">
+                                        <option value="">Selecione </option>
+                                        <option ng-repeat="classes in ClasseCampeao" value="{{classes.Id}}">{{classes.Nome}} </option>
+                                    </select>
+                                </div>
                             </div>
                             <div class="col-lg-offset-4">
                                 <button type="submit" class="btn btn-primary">Gravar</button>
@@ -86,63 +97,57 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <hr />
-                        <h2>Jogadores cadastrados</h2>
+                        <h2>Competidores cadastrados</h2>
                         <div class="table-responsive">
                             <table class="table table-hover table-striped">
                                 <thead>
                                     <tr>
                                         <th>Nome</th>
-                                        <th>Apelido</th>
-                                        <th>Idade</th>
-                                        <th>email</th>
+                                        <th>Vitorias</th>
+                                        <th>Derrotas</th>
+                                        <th>Time</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>/index.html</td>
+                                        <td>Suykoden</td>
                                         <td>1265</td>
-                                        <td>32.3%</td>
-                                        <td>$321.33</td>
+                                        <td>0</td>
+                                        <td>Kabum</td>
                                         <td>
                                             <button type="submit" class="btn btn-success">Editar</button>
-                                            <button type="submit" class="btn btn-Danger">Excluir</button>
+                                            <button type="submit" class="btn btn-danger">Excluir</button>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>/about.html</td>
-                                        <td>261</td>
-                                        <td>33.3%</td>
-                                        <td>$234.12</td>
+                                        <td>Kabrito</td>
+                                        <td>250</td>
+                                        <td>4</td>
+                                        <td>CNB</td>
+                                        <td>
+                                            <button type="submit" class="btn btn-success">Editar</button>
+                                            <button type="submit" class="btn btn-danger">Excluir</button>
+                                        </td>
                                     </tr>
                                     <tr>
-                                        <td>/sales.html</td>
-                                        <td>665</td>
-                                        <td>21.3%</td>
-                                        <td>$16.34</td>
+                                        <td>Noobão</td>
+                                        <td>0</td>
+                                        <td>200</td>
+                                        <td>E-sports</td>
+                                        <td>
+                                            <button type="submit" class="btn btn-success">Editar</button>
+                                            <button type="submit" class="btn btn-danger">Excluir</button>
+                                        </td>
                                     </tr>
                                     <tr>
-                                        <td>/blog.html</td>
+                                        <td>Sem nome</td>
                                         <td>9516</td>
-                                        <td>89.3%</td>
-                                        <td>$1644.43</td>
-                                    </tr>
-                                    <tr>
-                                        <td>/404.html</td>
-                                        <td>23</td>
-                                        <td>34.3%</td>
-                                        <td>$23.52</td>
-                                    </tr>
-                                    <tr>
-                                        <td>/services.html</td>
-                                        <td>421</td>
-                                        <td>60.3%</td>
-                                        <td>$724.32</td>
-                                    </tr>
-                                    <tr>
-                                        <td>/blog/post.html</td>
-                                        <td>1233</td>
-                                        <td>93.2%</td>
-                                        <td>$126.34</td>
+                                        <td>893</td>
+                                        <td>CNB</td>
+                                        <td>
+                                            <button type="submit" class="btn btn-success">Editar</button>
+                                            <button type="submit" class="btn btn-danger">Excluir</button>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
