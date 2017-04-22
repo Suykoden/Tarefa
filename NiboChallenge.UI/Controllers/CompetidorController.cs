@@ -17,19 +17,19 @@ namespace NiboChallenge.UI.Controllers
         {
             _jogadorAppService = jogadorAppService;
         }
-        // GET: api/Jogadores
+        // GET: api/Competidor
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
         }
 
-        // GET: api/Jogadores/5
+        // GET: api/Competidor/5
         public string Get(int id)
         {
             return "value";
         }
 
-        // POST: api/Jogadores
+        // POST: api/Competidor
         public void Post(Competidor jogador)
         {
             jogador.Id = Guid.NewGuid();
@@ -38,12 +38,12 @@ namespace NiboChallenge.UI.Controllers
             _jogadorAppService.Add(jogador);
         }
 
-        // PUT: api/Jogadores/5
+        // PUT: api/Competidor/5
         public void Put(int id, [FromBody]string value)
         {
         }
 
-        // DELETE: api/Jogadores/5
+        // DELETE: api/Competidor/5
         public void Delete(int id)
         {
         }

@@ -40,11 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassseCampeaoAppService.cs" />
     <Compile Include="Interface\IAppServiceBase.cs" />
+    <Compile Include="Interface\IClasseCampeaoAppService.cs" />
     <Compile Include="Interface\IJogadorAppService.cs" />
+    <Compile Include="Interface\ITimeAppService.cs" />
     <Compile Include="JogadorAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AppServiceBase.cs" />
+    <Compile Include="TimeAppService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NiboChallenge.Domain\NiboChallenge.Domain.csproj">

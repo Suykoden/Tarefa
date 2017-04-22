@@ -1,9 +1,9 @@
 ﻿var app = angular.module("app", []);
-app.controller("CadastroCompeditorController", function ($scope, $http) {
+app.controller("CadastroCompetidorController", function ($scope, $http) {
 
-    $scope.SendData = function () {
+    $scope.GravaDados = function () {
 
-        $http.post('/api/Jogadores', $scope.Competidor)
+        $http.post('/api/Competidor', $scope.Competidor)
         .success(function (data) {
             $scope.PostDataResponse = data;
         })

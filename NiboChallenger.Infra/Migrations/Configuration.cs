@@ -101,8 +101,6 @@ namespace NiboChallenger.Infra.Migrations
                 });
 
 
-
-
                 context.SaveChanges();
             }
             catch (Exception)

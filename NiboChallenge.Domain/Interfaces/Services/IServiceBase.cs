@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace NiboChallenge.Domain.Interfaces.Services
 {
     public interface IServicoBase<TEntity> where TEntity : class

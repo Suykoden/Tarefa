@@ -9,6 +9,7 @@ namespace NiboChallenge.Domain.Entities
 {
     public class Time : EntityWithCodeAndName
     {
-        
+        public DateTime DataCadastro { get; set; }
+        public bool Ativo { get; set; }
     }
 }
