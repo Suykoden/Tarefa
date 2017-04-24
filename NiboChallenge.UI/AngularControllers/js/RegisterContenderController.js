@@ -1,17 +1,22 @@
 ﻿var app = angular.module("app", []);
 app.controller("RegisterContenderController", function ($scope, $http) {
-
+    $scope.FormAddContender = {};
     $scope.Save = function () {
 
         $http.post('/api/Contender', $scope.Contender)
         .success(function (data) {
             $scope.PostDataResponse = data;
+            $scope.Contender = {};
+            $scope.FormAddContender.$setUntouched();
+            $scope.FormAddContender.$setPristine();
+            $scope.LoadContenders();
+            
         })
         .error(function (data, status, header, config) {
             $scope.ResponseDetails = "Data: " + data +
                 "<hr />status: " + status;
         });
-        $scope.LoadContenders();
+        
     };
 
     $scope.LoadCategories = function () {

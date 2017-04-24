@@ -59,7 +59,7 @@
                 </div>
                 <div class="row" >
                     <div class="col-lg-2">
-                        <form name="AdicionaCompetidor" ng-submit="Save()">
+                        <form name="FormAddContender"  ng-model ="FormAddContender" ng-submit="Save()">
                             <div class="form-group">
                                 <label>Nome</label>
                                 <input class="form-control" placeholder="Nome do jogador" ng-model="Contender.Name">
@@ -109,16 +109,18 @@
                                         <th>Segunda habilidade</th>
                                     </tr>
                                 </thead>
-                                <tbody  ng-init="LoadContenders()"  ng-Repeat-="contenders in ContendersList">
-                                    <tr>
+                                <tbody ng-init="LoadContenders()" >
+
+                                    <tr ng-repeat="contenders in ContendersList">
                                         <td>{{contenders.Name}}</td>
                                         <td>{{contenders.Victory}}</td>
                                         <td>{{contenders.Defeat}}</td>
                                         <td>
-                                            <button type="submit" class="btn btn-success">Editar</button>
+                                            <button type="submit" class="btn btn-success" >Editar</button>
                                             <button type="submit" class="btn btn-danger">Excluir</button>
                                         </td>
                                     </tr>
+                                      
                                 </tbody>
                             </table>
                         </div>
