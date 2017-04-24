@@ -209,24 +209,23 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
-    <Compile Include="Controllers\ClasseCampeaoController.cs" />
-    <Compile Include="Controllers\HabilidadeController.cs" />
+    <Compile Include="Controllers\ContenderCategoryController.cs" />
+    <Compile Include="Controllers\SkillController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\CompetidorController.cs" />
-    <Compile Include="Controllers\TimesController.cs" />
+    <Compile Include="Controllers\ContenderController.cs" />
+    <Compile Include="Controllers\TeamController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AngularControllers\js\CadastroCompetidorController.js" />
+    <Content Include="AngularControllers\js\RegisterContenderController.js" />
     <Content Include="AngularControllers\js\angular-route.js" />
     <Content Include="AngularControllers\js\angular-route.min.js" />
     <Content Include="AngularControllers\js\angular-sanitize.js" />
     <Content Include="AngularControllers\js\angular.min.js" />
-    <Content Include="AngularControllers\js\CadastroTimeController.js" />
-    <Content Include="AngularControllers\js\CarregaClasseController.js" />
+    <Content Include="AngularControllers\js\RegisterTeamController.js" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -332,9 +331,9 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\MenuLateral.cshtml" />
-    <Content Include="Views\Home\CadastroCompetidor.cshtml" />
+    <Content Include="Views\Home\ContenderRegister.cshtml" />
     <Content Include="Views\Shared\ApplicationName.cshtml" />
-    <Content Include="Views\Home\CadastroTimes.cshtml" />
+    <Content Include="Views\Home\TeamRegister.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NiboChallenge.Domain\NiboChallenge.Domain.csproj">

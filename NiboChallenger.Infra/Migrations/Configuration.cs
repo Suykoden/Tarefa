@@ -23,81 +23,81 @@ namespace NiboChallenger.Infra.Migrations
 
 
 
-          try
+            try
             {
 
                 //fills the table habilidades
-                var HabilidadeDbSet = context.Set<Habilidade>();
-                 HabilidadeDbSet.Add(new Habilidade()
-                 {
-                     Id = Guid.NewGuid(),
-                     Nome = "Onda Sônica",
-                     Detalhe = "Projeta  uma onda de som para localizar seus inimigos, causando Dano Físico ao primeiro que encontrar. Caso a Onda Sônica acerte, Lee Sin poderá lançar o Ataque Ressonante pelos próximos 3 segundos",
+                var SkillDbSet = context.Set<Skill>();
+                SkillDbSet.Add(new Skill()
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "Onda Sônica",
+                    Detail = "Projeta  uma onda de som para localizar seus inimigos, causando Dano Físico ao primeiro que encontrar. Caso a Onda Sônica acerte, Lee Sin poderá lançar o Ataque Ressonante pelos próximos 3 segundos",
 
-                 });
+                });
 
-                 HabilidadeDbSet.Add(new Habilidade()
-                 {
-                     Id = Guid.NewGuid(),
-                     Nome = "Ataque Ressonante",
-                     Detalhe = "Avança até o inimigo, causando Dano Físico mais 8% de sua Vida perdida.",
+                SkillDbSet.Add(new Skill()
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "Ataque Ressonante",
+                    Detail = "Avança até o inimigo, causando Dano Físico mais 8% de sua Vida perdida.",
 
-                 });
+                });
 
-                 HabilidadeDbSet.Add(new Habilidade()
-                 {
-                     Id = Guid.NewGuid(),
-                     Nome = "Contra-Ataque",
-                     Detalhe = "Adota uma postura defensiva por até 2 segundos, desviando de todos os ataques básicos recebidos.",
+                SkillDbSet.Add(new Skill()
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "Contra-Ataque",
+                    Detail = "Adota uma postura defensiva por até 2 segundos, desviando de todos os ataques básicos recebidos.",
 
-                 });
-                 HabilidadeDbSet.Add(new Habilidade()
-                 {
-                     Id = Guid.NewGuid(),
-                     Nome = "Voadora",
-                     Detalhe = "Apenas um chute de voadora.",
+                });
+                SkillDbSet.Add(new Skill()
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "Voadora",
+                    Detail = "Apenas um chute de voadora.",
 
-                 });
-                 HabilidadeDbSet.Add(new Habilidade()
-                 {
-                     Id = Guid.NewGuid(),
-                     Nome = "Explosão sinistra",
-                     Detalhe = "Explode tudo.",
+                });
+                SkillDbSet.Add(new Skill()
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "Explosão sinistra",
+                    Detail = "Explode tudo.",
 
-                 });
+                });
 
                 //fills the table ClasseCampeao
-                var ClasseCampeaoDbSet = context.Set<ClasseCampeao>();
+                var ContenderCategoryDbSet = context.Set<ContenderCategory>();
 
-                ClasseCampeaoDbSet.Add(new ClasseCampeao
+                ContenderCategoryDbSet.Add(new ContenderCategory
                 {
                     Id = Guid.NewGuid(),
-                    Nome = "Assassino"
+                    Name = "Assassino"
                 });
-                ClasseCampeaoDbSet.Add(new ClasseCampeao
+                ContenderCategoryDbSet.Add(new ContenderCategory
                 {
                     Id = Guid.NewGuid(),
-                    Nome = "Lutador"
+                    Name = "Lutador"
                 });
-                ClasseCampeaoDbSet.Add(new ClasseCampeao
+                ContenderCategoryDbSet.Add(new ContenderCategory
                 {
                     Id = Guid.NewGuid(),
-                    Nome = "Mago"
+                    Name = "Mago"
                 });
-                ClasseCampeaoDbSet.Add(new ClasseCampeao
+                ContenderCategoryDbSet.Add(new ContenderCategory
                 {
                     Id = Guid.NewGuid(),
-                    Nome = "Suporte(The best)"
+                    Name = "Suporte(The best)"
                 });
-                ClasseCampeaoDbSet.Add(new ClasseCampeao
+                ContenderCategoryDbSet.Add(new ContenderCategory
                 {
                     Id = Guid.NewGuid(),
-                    Nome = "Tanque(Atenção somente para brabos)"
+                    Name = "Tanque(Atenção somente para brabos)"
                 });
-                ClasseCampeaoDbSet.Add(new ClasseCampeao
+                ContenderCategoryDbSet.Add(new ContenderCategory
                 {
                     Id = Guid.NewGuid(),
-                    Nome = "Atirador"
+                    Name = "Atirador"
                 });
 
 

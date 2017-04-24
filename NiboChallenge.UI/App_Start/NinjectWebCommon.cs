@@ -88,24 +88,24 @@ namespace NiboChallenge.UI.App_Start
 
             //application
             kernel.Bind(typeof(IAppServiceBase<>)).To(typeof(AppServiceBase<>));
-            kernel.Bind<ICompetidorAppService>().To<CompetidorAppService>();
-            kernel.Bind<ITimeAppService>().To<TimeAppService>();
-            kernel.Bind<IClasseCampeaoAppService>().To<ClasseCampeaoAppService>();
-            kernel.Bind<IHabilidadeAppService>().To<HabilidadeAppService>();
+            kernel.Bind<IContenderAppService>().To<ContenderAppService>();
+            kernel.Bind<ITeamAppService>().To<TeamAppService>();
+            kernel.Bind<IContenderCategoryAppService>().To<ContenderCategoryAppService>();
+            kernel.Bind<ISkillAppService>().To<SkillAppService>();
 
             //Domain
             kernel.Bind(typeof(IServicoBase<>)).To(typeof(ServiceBase<>));
-            kernel.Bind<ICompetidorService>().To<CompetidorService>();
-            kernel.Bind<ITimeService>().To<TimeService>();
-            kernel.Bind<IClasseCampeaoService>().To<ClasseCampeaoService>();
-            kernel.Bind<IHabilidadeService>().To<HabilidadeService>();
+            kernel.Bind<IContenderService>().To<ContenderService>();
+            kernel.Bind<ITeamService>().To<TeamService>();
+            kernel.Bind<IContenderCategoryService>().To<ContenderCategoryService>();
+            kernel.Bind<ISkillService>().To<SkillService>();
 
             //Repositories
             kernel.Bind(typeof(IRepositoryBase<>)).To(typeof(RepositoryBase<>));
-            kernel.Bind<ICompetidorRepository>().To<CompetidorRepository>();
-            kernel.Bind<ITimeRepository>().To<TimeRepository>();
-            kernel.Bind<IClasseCampeaoRepository>().To<ClasseCampeaoRepository>();
-            kernel.Bind<IHabilidadeRepository>().To<HabilidadeRepository>();
+            kernel.Bind<IContenderRepository>().To<ContenderRepository>();
+            kernel.Bind<ITeamRepository>().To<TeamRepository>();
+            kernel.Bind<IContenderCategoryRepository>().To<ContenderCategoryRepository>();
+            kernel.Bind<ISkillRepository>().To<SkillRepository>();
         }
     }
 

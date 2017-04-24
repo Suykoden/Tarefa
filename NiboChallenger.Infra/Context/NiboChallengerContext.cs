@@ -18,11 +18,10 @@ namespace NiboChallenger.Infra.Context
 
         }
        
-        public DbSet<ClasseCampeao> ClasseCampeao { get; set; }
-        public DbSet<Foto> Foto { get; set; }
-        public DbSet<Competidor> Competidor { get; set; }
-        public DbSet<Habilidade> Habilidade { get; set; }
-        public DbSet<Time> Time { get; set; }
+        public DbSet<ContenderCategory> ContenderCategories { get; set; }
+        public DbSet<Contender> Contenders { get; set; }
+        public DbSet<Skill> Skills { get; set; }
+        public DbSet<Team> Teams { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

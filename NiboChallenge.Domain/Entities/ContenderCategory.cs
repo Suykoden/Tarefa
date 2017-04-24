@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NiboChallenge.Domain.EntitiesBase;
 
-namespace NiboChallenge.Domain.EntitiesBase
+namespace NiboChallenge.Domain.Entities
 {
-    public class EntityWithCode : EntityBase
+    public class ContenderCategory : EntityWithName
     {
-        public string Code { get; set; }
+
     }
 }

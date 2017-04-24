@@ -14,12 +14,12 @@ namespace NiboChallenge.UI.Controllers
         }
 
 
-        public ActionResult CadastroCompetidor()
+        public ActionResult ContenderRegister()
         {
             return View();
         }
 
-        public ActionResult CadastroTimes()
+        public ActionResult TeamRegister()
         {
             return View();
         }

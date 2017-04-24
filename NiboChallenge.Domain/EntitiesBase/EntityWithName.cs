@@ -8,6 +8,6 @@ namespace NiboChallenge.Domain.EntitiesBase
 {
     public class EntityWithName: EntityBase
     {
-        public string Nome { get; set; }
+        public string Name { get; set; }
     }
 }
