@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using NiboChallenge.Domain.Entities;
 using NiboChallenge.Domain.Interfaces.Services;
-using NiboChallenger.Application.DTO;
 using NiboChallenger.Application.Interface;
 
 namespace NiboChallenger.Application

@@ -41,7 +41,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ContenderCategoryAppService.cs" />
-    <Compile Include="DTO\ContenderDto.cs" />
     <Compile Include="SkillAppService.cs" />
     <Compile Include="Interface\IAppServiceBase.cs" />
     <Compile Include="Interface\IContenderCategoryAppService.cs" />
@@ -57,10 +56,6 @@
     <ProjectReference Include="..\NiboChallenge.Domain\NiboChallenge.Domain.csproj">
       <Project>{541affaa-3390-46da-bf75-16ff3d2133fd}</Project>
       <Name>NiboChallenge.Domain</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SeedWork\SeedWork.csproj">
-      <Project>{09dfcdc1-af0f-4c2c-97b8-2c13289430df}</Project>
-      <Name>SeedWork</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

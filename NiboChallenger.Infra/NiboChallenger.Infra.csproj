@@ -68,14 +68,6 @@
       <Project>{541affaa-3390-46da-bf75-16ff3d2133fd}</Project>
       <Name>NiboChallenge.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\NiboChallenger.Application\NiboChallenger.Application.csproj">
-      <Project>{12F72435-D5CA-4ECB-BAD7-23E353E59795}</Project>
-      <Name>NiboChallenger.Application</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SeedWork\SeedWork.csproj">
-      <Project>{09dfcdc1-af0f-4c2c-97b8-2c13289430df}</Project>
-      <Name>SeedWork</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

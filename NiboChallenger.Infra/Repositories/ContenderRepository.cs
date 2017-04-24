@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using NiboChallenge.Domain.Entities;
 using NiboChallenge.Domain.Interfaces.Repositories;
 using NiboChallenger.Infra.Context;
-using NiboChallenger.Application.DTO;
 
 namespace NiboChallenger.Infra.Repositories
 {
@@ -15,15 +14,15 @@ namespace NiboChallenger.Infra.Repositories
         protected NiboChallengerContext Db = new NiboChallengerContext();
 
 
-        public IEnumerable<ContenderDto> GetContenders()
+        public IEnumerable<Contender>GetContenders()
         {
 
             var ConterderList = (from c in Db.Contenders
                                      join cc in Db.ContenderCategories on c.ContenderCategoryId equals cc.Id
-                                     select new ContenderDto()
+                                     select new Contender()
                                      {
-                                         Victory =c.Victory
-                                        
+                                         Id = c.Id,
+                                         Ativo = c.Ativo
 
 
                                      });
@@ -34,7 +33,5 @@ namespace NiboChallenger.Infra.Repositories
 
 
         }
-
-     
     }
 }
