@@ -19,10 +19,7 @@ namespace NiboChallenge.Domain.Services
             _contenderRepository = contenderRepository;
         }
 
-        public IEnumerable<Contender> GetContenders()
-        {
-            return _contenderRepository.GetContenders();
-        }
+       
 
     }
 }

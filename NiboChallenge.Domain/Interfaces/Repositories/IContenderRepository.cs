@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using NiboChallenge.Domain.Entities;
 
+
 namespace NiboChallenge.Domain.Interfaces.Repositories
 {
     public interface IContenderRepository : IRepositoryBase<Contender>
     {
-        IEnumerable<Contender> GetContenders();
+       
     }
 }

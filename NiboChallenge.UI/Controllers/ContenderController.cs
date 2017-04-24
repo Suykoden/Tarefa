@@ -34,8 +34,8 @@ namespace NiboChallenge.UI.Controllers
         public void Post(Contender contender)
         {
             contender.Id = Guid.NewGuid();
-            contender.RegisterDateTime = DateTime.Now;
             contender.Ativo = true;
+            contender.RegisterDateTime = DateTime.Now;
             _contenderAppServicecompetidorAppService.Add(contender);
         }
 

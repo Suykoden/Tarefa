@@ -9,6 +9,6 @@ namespace NiboChallenge.Domain.Interfaces.Services
 {
     public interface IContenderService : IServicoBase<Contender>
     {
-        IEnumerable<Contender>GetContenders();
+        
     }
 }
