@@ -25,7 +25,7 @@
     >
 </head>
 
-<body>
+<body ng-controller="RegisterContenderController">
     <div id="wrapper">
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -57,7 +57,7 @@
                         </h1>
                     </div>
                 </div>
-                <div class="row" ng-controller="RegisterContenderController">
+                <div class="row" >
                     <div class="col-lg-2">
                         <form name="AdicionaCompetidor" ng-submit="Save()">
                             <div class="form-group">
@@ -94,7 +94,7 @@
                         </form>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row" >
                     <div class="col-lg-12">
                         <hr />
                         <h2>Competidores cadastrados</h2>
@@ -109,42 +109,11 @@
                                         <th>Segunda habilidade</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody  ng-init="LoadContenders()"  ng-Repeat-="contenders in ContendersList">
                                     <tr>
-                                        <td>Suykoden</td>
-                                        <td>1265</td>
-                                        <td>0</td>
-                                        <td>Kabum</td>
-                                        <td>
-                                            <button type="submit" class="btn btn-success">Editar</button>
-                                            <button type="submit" class="btn btn-danger">Excluir</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Kabrito</td>
-                                        <td>250</td>
-                                        <td>4</td>
-                                        <td>CNB</td>
-                                        <td>
-                                            <button type="submit" class="btn btn-success">Editar</button>
-                                            <button type="submit" class="btn btn-danger">Excluir</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Noobão</td>
-                                        <td>0</td>
-                                        <td>200</td>
-                                        <td>E-sports</td>
-                                        <td>
-                                            <button type="submit" class="btn btn-success">Editar</button>
-                                            <button type="submit" class="btn btn-danger">Excluir</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Sem nome</td>
-                                        <td>9516</td>
-                                        <td>893</td>
-                                        <td>CNB</td>
+                                        <td>{{contenders.Name}}</td>
+                                        <td>{{contenders.Victory}}</td>
+                                        <td>{{contenders.Defeat}}</td>
                                         <td>
                                             <button type="submit" class="btn btn-success">Editar</button>
                                             <button type="submit" class="btn btn-danger">Excluir</button>

@@ -11,6 +11,7 @@ app.controller("RegisterContenderController", function ($scope, $http) {
             $scope.ResponseDetails = "Data: " + data +
                 "<hr />status: " + status;
         });
+        $scope.LoadContenders();
     };
 
     $scope.LoadCategories = function () {
@@ -41,5 +42,23 @@ app.controller("RegisterContenderController", function ($scope, $http) {
          .error(function () {
              alert("Não foi possível carregar os dados");
          });
+
+
+    }
+    $scope.LoadContenders = function () {
+        $http
+        .get("/api/Contender")
+        .success(function (data) {
+            console.log(data);
+            $scope.dados = data;
+            $scope.ContendersList = data;
+
+
+        })
+         .error(function () {
+             alert("Não foi possível carregar os dados");
+         });
+
+
     }
 });

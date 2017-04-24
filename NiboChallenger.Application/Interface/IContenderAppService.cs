@@ -10,6 +10,5 @@ namespace NiboChallenger.Application.Interface
 {
     public interface IContenderAppService : IAppServiceBase<Contender>
     {
-        IEnumerable<Contender>GetContenders();
     }
 }

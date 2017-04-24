@@ -19,9 +19,6 @@ namespace NiboChallenger.Application
             _contenderServiceService = contenderService;
         }
 
-        public IEnumerable<Contender> GetContenders()
-        {
-            return _contenderServiceService.GetContenders();
-        }
+     
     }
 }

@@ -9,6 +9,5 @@ namespace NiboChallenge.Domain.Interfaces.Repositories
 {
     public interface IContenderRepository : IRepositoryBase<Contender>
     {
-        IEnumerable<Contender> GetContenders();
     }
 }

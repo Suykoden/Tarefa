@@ -20,8 +20,8 @@ namespace NiboChallenge.UI.Controllers
         // GET: api/Contender
         public IEnumerable<Contender> Get()
         {
-            var listaCompeditor = _contenderAppServicecompetidorAppService.GetContenders();
-            return _contenderAppServicecompetidorAppService.GetContenders();
+
+            return _contenderAppServicecompetidorAppService.GetAll();
         }
 
         // GET: api/Contender/5
