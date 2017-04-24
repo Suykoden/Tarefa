@@ -74,17 +74,17 @@
                                 <br />
                                 <div class="dropdown">
                                     <label>Primeira habilidade</label>
-                                    <select class="form-control" style="overflow: hidden" name="ClasseCampeao" id="ClasseCampeao" ng-model="Competidor.ClasseCampeaoId" ng-init="CarregaClasses()">
+                                    <select class="form-control" style="overflow: hidden" name="PrimeiraHabilidade" id="PrimeiraHabilidade" ng-model="Competidor.PrimeiraHabilidadeId" ng-init="CarregaHabilidades()">
                                         <option value="">Selecione </option>
-                                        <option ng-repeat="classes in ClasseCampeao" value="{{classes.Id}}">{{classes.Nome}} </option>
+                                        <option ng-repeat="habilidades in Habilidades" value="{{habilidades.Id}}">{{habilidades.Nome + "." + " Detalhe: " + habilidades.Detalhe}} </option>
                                     </select>
                                 </div>
                                 <br />
                                 <div class="dropdown">
                                     <label>Segunda habilidade</label>
-                                    <select class="form-control" style="overflow: hidden" name="ClasseCampeao" id="ClasseCampeao" ng-model="Competidor.ClasseCampeaoId" ng-init="CarregaClasses()">
+                                    <select class="form-control" style="overflow: hidden" name="SegundaHabilidade" id="SegundaHabilidade" ng-model="Competidor.SegundaHabilidadeId" ng-init="CarregaHabilidades()">
                                         <option value="">Selecione </option>
-                                        <option ng-repeat="classes in ClasseCampeao" value="{{classes.Id}}">{{classes.Nome}} </option>
+                                        <option ng-repeat="habilidades in Habilidades" value="{{habilidades.Id}}">{{habilidades.Nome + "." + " Detalhe: " + habilidades.Detalhe}} </option>
                                     </select>
                                 </div>
                             </div>

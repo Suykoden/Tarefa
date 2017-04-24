@@ -33,4 +33,19 @@ app.controller("CadastroCompetidorController", function ($scope, $http) {
              alert("Não foi possível carregar os dados");
          });
     }
+
+    $scope.CarregaHabilidades = function () {
+        $http
+        .get("/api/Habilidade")
+        .success(function (data) {
+            console.log(data);
+            $scope.dados = data;
+            $scope.Habilidades = data;
+
+
+        })
+         .error(function () {
+             alert("Não foi possível carregar os dados");
+         });
+    }
 });

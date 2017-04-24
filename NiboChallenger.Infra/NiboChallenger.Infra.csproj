@@ -54,6 +54,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ClasseCampeaoRepository.cs" />
     <Compile Include="Repositories\CompetidorRepository.cs" />
+    <Compile Include="Repositories\HabilidadeRepository.cs" />
     <Compile Include="Repositories\RepositoryBase.cs" />
     <Compile Include="Repositories\TimeRepository.cs" />
   </ItemGroup>

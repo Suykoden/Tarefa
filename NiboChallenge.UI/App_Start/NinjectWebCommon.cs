@@ -88,21 +88,24 @@ namespace NiboChallenge.UI.App_Start
 
             //application
             kernel.Bind(typeof(IAppServiceBase<>)).To(typeof(AppServiceBase<>));
-            kernel.Bind<IJogadorAppService>().To<JogadorAppService>();
+            kernel.Bind<ICompetidorAppService>().To<CompetidorAppService>();
             kernel.Bind<ITimeAppService>().To<TimeAppService>();
             kernel.Bind<IClasseCampeaoAppService>().To<ClasseCampeaoAppService>();
+            kernel.Bind<IHabilidadeAppService>().To<HabilidadeAppService>();
 
             //Domain
             kernel.Bind(typeof(IServicoBase<>)).To(typeof(ServiceBase<>));
-            kernel.Bind<IJogadorService>().To<CompetidorService>();
+            kernel.Bind<ICompetidorService>().To<CompetidorService>();
             kernel.Bind<ITimeService>().To<TimeService>();
             kernel.Bind<IClasseCampeaoService>().To<ClasseCampeaoService>();
+            kernel.Bind<IHabilidadeService>().To<HabilidadeService>();
 
             //Repositories
             kernel.Bind(typeof(IRepositoryBase<>)).To(typeof(RepositoryBase<>));
             kernel.Bind<ICompetidorRepository>().To<CompetidorRepository>();
             kernel.Bind<ITimeRepository>().To<TimeRepository>();
             kernel.Bind<IClasseCampeaoRepository>().To<ClasseCampeaoRepository>();
+            kernel.Bind<IHabilidadeRepository>().To<HabilidadeRepository>();
         }
     }
 

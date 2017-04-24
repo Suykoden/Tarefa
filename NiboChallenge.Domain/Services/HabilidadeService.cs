@@ -9,15 +9,13 @@ using NiboChallenge.Domain.Interfaces.Services;
 
 namespace NiboChallenge.Domain.Services
 {
-    public class CompetidorService : ServiceBase<Competidor>, ICompetidorService
+    public class HabilidadeService : ServiceBase<Habilidade>, IHabilidadeService
     {
-        private ICompetidorRepository _competidorRepository;
-
-        public CompetidorService(ICompetidorRepository competidorRepository)
-            :base(competidorRepository)
+        private IHabilidadeRepository _habilidadeRepository;
+        public HabilidadeService(IHabilidadeRepository habilidadeRepository) :
+            base(habilidadeRepository)
         {
-            _competidorRepository = competidorRepository;
+            _habilidadeRepository = habilidadeRepository;
         }
-
     }
 }

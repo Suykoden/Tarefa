@@ -23,7 +23,7 @@ namespace NiboChallenger.Infra.Migrations
 
 
 
-           /* try
+          try
             {
 
                 //fills the table habilidades
@@ -107,7 +107,7 @@ namespace NiboChallenger.Infra.Migrations
             {
 
 
-            }*/
+            }
 
         }
     }

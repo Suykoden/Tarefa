@@ -11,11 +11,11 @@ namespace NiboChallenge.UI.Controllers
 {
     public class CompetidorController : ApiController
     {
-        private readonly IJogadorAppService _jogadorAppService;
+        private readonly ICompetidorAppService _competidorAppService;
 
-        public CompetidorController(IJogadorAppService jogadorAppService)
+        public CompetidorController(ICompetidorAppService competidorAppService)
         {
-            _jogadorAppService = jogadorAppService;
+            _competidorAppService = competidorAppService;
         }
         // GET: api/Competidor
         public IEnumerable<string> Get()
@@ -35,7 +35,7 @@ namespace NiboChallenge.UI.Controllers
             jogador.Id = Guid.NewGuid();
             jogador.Ativo = true;
             jogador.DataCadastro = DateTime.Now;
-            _jogadorAppService.Add(jogador);
+            _competidorAppService.Add(jogador);
         }
 
         // PUT: api/Competidor/5

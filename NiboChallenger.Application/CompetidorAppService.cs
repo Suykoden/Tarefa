@@ -9,14 +9,14 @@ using NiboChallenger.Application.Interface;
 
 namespace NiboChallenger.Application
 {
-    public class JogadorAppService : AppServiceBase<Competidor>, IJogadorAppService
+    public class CompetidorAppService : AppServiceBase<Competidor>, ICompetidorAppService
     {
-        private readonly IJogadorService _JogadorService;
+        private readonly ICompetidorService _competidorService;
 
-        public JogadorAppService(IJogadorService jogadorService)
-        : base(jogadorService)
+        public CompetidorAppService(ICompetidorService competidorService)
+        : base(competidorService)
         {
-            _JogadorService = jogadorService;
+            _competidorService = competidorService;
         }
 
     }

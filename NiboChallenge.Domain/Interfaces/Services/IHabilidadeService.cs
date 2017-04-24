@@ -5,10 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using NiboChallenge.Domain.Entities;
 
-namespace NiboChallenger.Application.Interface
+namespace NiboChallenge.Domain.Interfaces.Services
 {
-    public interface IJogadorAppService : IAppServiceBase<Competidor>
+    public interface IHabilidadeService: IServicoBase<Habilidade>
     {
-        //Damasio: Especialized routines here
     }
 }

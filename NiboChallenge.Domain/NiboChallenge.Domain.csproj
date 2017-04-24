@@ -52,15 +52,18 @@
     <Compile Include="Entities\Habilidade.cs" />
     <Compile Include="Interfaces\Repositories\IClasseCampeaoRepository.cs" />
     <Compile Include="Interfaces\Repositories\ICompetidorRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IHabilidadeRepository.cs" />
     <Compile Include="Interfaces\Repositories\IRepositoryBase.cs" />
     <Compile Include="Interfaces\Repositories\ITimeRepository.cs" />
     <Compile Include="Interfaces\Services\IClasseCampeaoService.cs" />
-    <Compile Include="Interfaces\Services\IJogadorService.cs" />
+    <Compile Include="Interfaces\Services\IHabilidadeService.cs" />
+    <Compile Include="Interfaces\Services\ICompetidorService.cs" />
     <Compile Include="Interfaces\Services\IServiceBase.cs" />
     <Compile Include="Interfaces\Services\ITimeService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ClasseCampeaoService.cs" />
     <Compile Include="Services\CompetidorService.cs" />
+    <Compile Include="Services\HabilidadeService.cs" />
     <Compile Include="Services\ServiceBase.cs" />
     <Compile Include="Services\TimeService.cs" />
   </ItemGroup>
