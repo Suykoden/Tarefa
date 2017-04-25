@@ -92,7 +92,7 @@ namespace NiboChallenge.UI.App_Start
             kernel.Bind<ITeamAppService>().To<TeamAppService>();
             kernel.Bind<IContenderCategoryAppService>().To<ContenderCategoryAppService>();
             kernel.Bind<ISkillAppService>().To<SkillAppService>();
-            kernel.Bind<IContenderTeamService>().To<ContenderTeamService>();
+            kernel.Bind<IContenderTeamAppService>().To<ContenderTeamAppService>();
 
             //Domain
             kernel.Bind(typeof(IServicoBase<>)).To(typeof(ServiceBase<>));

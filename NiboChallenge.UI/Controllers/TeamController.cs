@@ -14,12 +14,12 @@ namespace NiboChallenge.UI.Controllers
     public class TeamController : ApiController
     {
         private readonly ITeamAppService _teamAppService;
-       // private readonly IContenderTeamAppService _contenderTeamAppService;
+        private readonly IContenderTeamAppService _contenderTeamAppService;
 
-        public TeamController(ITeamAppService teamAppService)
+        public TeamController(ITeamAppService teamAppService, IContenderTeamAppService contenderTeamAppService )
         {
             _teamAppService = teamAppService;
-      //      _contenderTeamAppService = contenderTeamAppService;
+            _contenderTeamAppService = contenderTeamAppService;
         }
 
 
@@ -59,7 +59,7 @@ namespace NiboChallenge.UI.Controllers
                     ContenderId = teamDTO.FirstContenderId,
                     TeamId = team.Id
                 };
-         //       _contenderTeamAppService.Add(ct);
+                _contenderTeamAppService.Add(ct);
             }
             if (teamDTO.SecondContenderId != Guid.Empty)
             {
@@ -69,7 +69,7 @@ namespace NiboChallenge.UI.Controllers
                     ContenderId = teamDTO.SecondContenderId,
                     TeamId = team.Id
                 };
-      //          _contenderTeamAppService.Add(ct);
+                _contenderTeamAppService.Add(ct);
             }
 
             if (teamDTO.ThirdContenderId != Guid.Empty)
@@ -80,7 +80,7 @@ namespace NiboChallenge.UI.Controllers
                     ContenderId = teamDTO.ThirdContenderId,
                     TeamId = team.Id
                 };
-          //      _contenderTeamAppService.Add(ct);
+                _contenderTeamAppService.Add(ct);
             }
 
 
