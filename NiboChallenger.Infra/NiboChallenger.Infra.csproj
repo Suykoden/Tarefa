@@ -58,6 +58,7 @@
     <Compile Include="Repositories\SkillRepository.cs" />
     <Compile Include="Repositories\RepositoryBase.cs" />
     <Compile Include="Repositories\TeamRepository.cs" />
+    <Compile Include="Repositories\TournamentRepository.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

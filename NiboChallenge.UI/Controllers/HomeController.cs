@@ -26,7 +26,10 @@ namespace NiboChallenge.UI.Controllers
 
         public ActionResult ContenderEdit(Guid id)
         {
-            ViewBag.Id = id;
+            return View();
+        }
+        public ActionResult TournamentManagement()
+        {
             return View();
         }
 

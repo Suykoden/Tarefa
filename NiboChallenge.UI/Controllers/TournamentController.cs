@@ -4,15 +4,27 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using NiboChallenge.Domain.Entities;
+using NiboChallenger.Application.Interface;
+using NiboChallenger.Application.DTO;
 
 namespace NiboChallenge.UI.Controllers
 {
+
     public class TournamentController : ApiController
     {
-        // GET: api/Tournament
-        public IEnumerable<string> Get()
+        private readonly ITournamentAppService _tournamentAppService;
+
+
+        public TournamentController(ITournamentAppService tournamentAppService)
         {
-            return new string[] { "value1", "value2" };
+            _tournamentAppService = tournamentAppService;
+
+        }
+        // GET: api/Tournament
+        public IEnumerable<Tournament> Get()
+        {
+            return _tournamentAppService.GetAll().Where(t => t.Active == true);
         }
 
         // GET: api/Tournament/5
@@ -22,13 +34,19 @@ namespace NiboChallenge.UI.Controllers
         }
 
         // POST: api/Tournament
-        public void Post([FromBody]string value)
+        public void Post([FromBody]Tournament tournament)
         {
+            tournament.Id = Guid.NewGuid();
+            tournament.RegisterDateTime = DateTime.Now;
+            tournament.Active = true;
+            _tournamentAppService.Add(tournament);
         }
 
         // PUT: api/Tournament/5
-        public void Put(int id, [FromBody]string value)
+        public void Put(Tournament tournament)
         {
+            tournament.Active = false;
+            _tournamentAppService.Update(tournament);
         }
 
         // DELETE: api/Tournament/5

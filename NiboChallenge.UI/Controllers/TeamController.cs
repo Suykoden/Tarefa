@@ -27,7 +27,7 @@ namespace NiboChallenge.UI.Controllers
         public IEnumerable<Team> Get()
         {
             // returning only the teams that are
-            return _teamAppService.GetAll().Where(t => t.Active = true);
+            return _teamAppService.GetAll().Where(t => t.Active == true);
         }
 
         // GET: api/Team/5

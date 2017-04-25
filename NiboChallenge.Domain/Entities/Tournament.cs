@@ -7,7 +7,9 @@ using NiboChallenge.Domain.EntitiesBase;
 
 namespace NiboChallenge.Domain.Entities
 {
-    public class Tournament: EntityBase
+    public class Tournament: EntityWithName
     {
+        public DateTime RegisterDateTime { get; set; }
+        public bool Active { get; set; }
     }
 }
