@@ -29,7 +29,7 @@ namespace NiboChallenger.Application
             return _servicoBase.GetAll();
         }
 
-        Tentity IAppServiceBase<Tentity>.GetById(int id)
+        Tentity IAppServiceBase<Tentity>.GetById(Guid id)
         {
             return _servicoBase.GetById(id);
         }

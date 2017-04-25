@@ -26,9 +26,10 @@ namespace NiboChallenge.UI.Controllers
         }
 
         // GET: api/Contender/5
-        public string Get(int id)
+        public Contender Get(Guid id)
         {
-            return "value";
+           //Return a contender selected by the Id
+            return _contenderAppServicecompetidorAppService.GetById(id);
         }
 
         // POST: api/Contender
@@ -41,8 +42,11 @@ namespace NiboChallenge.UI.Controllers
         }
 
         // PUT: api/Contender/5
-        public void Put(int id, [FromBody]string value)
+        [HttpPut]
+        public void DeleteContender(Contender contender)
         {
+            contender.Ativo = false;
+            _contenderAppServicecompetidorAppService.Update(contender);
         }
 
         // DELETE: api/Contender/5

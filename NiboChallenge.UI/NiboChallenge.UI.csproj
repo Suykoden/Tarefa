@@ -331,7 +331,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\MenuLateral.cshtml" />
-    <Content Include="Views\Home\ContenderManagementController.cshtml" />
+    <Content Include="Views\Home\ContenderManagement.cshtml" />
     <Content Include="Views\Shared\ApplicationName.cshtml" />
     <Content Include="Views\Home\TeamRegister.cshtml" />
     <Content Include="Views\Home\ContenderEdit.cshtml" />
@@ -348,6 +348,10 @@
     <ProjectReference Include="..\NiboChallenger.Infra\NiboChallenger.Infra.csproj">
       <Project>{352ff7a9-a5a6-4b36-bb87-baa457aab273}</Project>
       <Name>NiboChallenger.Infra</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SeedWork\SeedWork.csproj">
+      <Project>{752B180F-BF9F-4551-9C28-2DB33270B4A9}</Project>
+      <Name>SeedWork</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

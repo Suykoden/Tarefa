@@ -102,7 +102,7 @@
                             <table class="table table-hover table-striped">
                                 <thead>
                                     <tr>
-                                        <th ng-click="OrderData('Name')"></th>
+                                        <th ng-click="OrderData('Name')"> Nome</th>
                                         <th ng-click="OrderData('RegisterDateTime')">Data cadastro</th>
                                         <th ng-click="OrderData('Victory')">Vitorias</th>
                                         <th ng-click="OrderData('Defeat')">Derrotas</th>
@@ -116,8 +116,9 @@
                                         <td>{{contenders.Victory}}</td>
                                         <td>{{contenders.Defeat}}</td>
                                         <td>
-                                            <button type="submit" class="btn btn-success">Editar</button>
-                                            <button type="submit" class="btn btn-danger">Excluir</button>
+                                            <!--Not working for while, not passing de parameter id to another view. Todo: Find a way to do this properly-->
+                                            <!--<button type="submit" class="btn btn-success" ng-click="EditContender(contenders.Id)">Editar</button>-->
+                                            <button type="submit" class="btn btn-danger" ng-click="DeleteContender(contenders)">Excluir</button>
                                         </td>
                                     </tr>
 

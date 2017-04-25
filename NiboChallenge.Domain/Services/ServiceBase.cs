@@ -26,7 +26,7 @@ namespace NiboChallenge.Domain.Services
             return _repository.GetAll();
         }
 
-        public TEntity GetById(int id)
+        public TEntity GetById(Guid id)
         {
             return _repository.GetById(id);
         }

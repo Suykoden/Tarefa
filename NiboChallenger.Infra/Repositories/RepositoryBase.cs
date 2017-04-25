@@ -23,7 +23,7 @@ namespace NiboChallenger.Infra.Repositories
             Db.SaveChanges();
         }
 
-        public TEntity GetById(int id)
+        public TEntity GetById(Guid id)
         {
             return Db.Set<TEntity>().Find(id);
         }

@@ -14,7 +14,7 @@ namespace NiboChallenge.UI.Controllers
         }
 
 
-        public ActionResult ContenderManagementController()
+        public ActionResult ContenderManagement()
         {
             return View();
         }
@@ -24,11 +24,12 @@ namespace NiboChallenge.UI.Controllers
             return View();
         }
 
-        [HttpPost]
-        public ActionResult ContenderEdit(int id)
+        public ActionResult ContenderEdit(Guid id)
         {
+            ViewBag.Id = id;
             return View();
         }
+
     }
 }
 

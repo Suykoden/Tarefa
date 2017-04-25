@@ -23,7 +23,7 @@
     >
 </head>
 
-<body ng-controller="RegisterContenderController">
+<body ng-controller="ContenderManagementController">
     <div id="wrapper">
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -55,44 +55,22 @@
                         </h1>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-2">
-                        <form name="FormAddContender" ng-model="FormAddContender" ng-submit="Save()">
-                            <div class="form-group">
-                                <label>Nome</label>
-                                <input class="form-control" placeholder="Nome do jogador" ng-model="Contender.Name">
-                                <br />
-                                <div class="dropdown">
-                                    <label>Classe</label>
-                                    <select class="form-control" style="overflow: hidden" name="ClasseCampeao" id="ClasseCampeao" ng-model="Contender.ContenderCategoryId" ng-init="LoadCategories()">
-                                        <option value="">Selecione </option>
-                                        <option ng-repeat="Categories in ContenderCategoriesList" value="{{Categories.Id}}">{{Categories.Name}} </option>
-                                    </select>
+                @{
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <form name="FormAddContender" ng-model="FormAddContender" ng-submit="Save()" ng-init="GetContender(@ViewBag.Id)">
+                                <div class="form-group">
+                                    <label>Nome</label>
+                                    <input class="form-control" placeholder="Nome do jogador" ng-model="ContenderEdit.Name">
+                                    <br />
                                 </div>
-                                <br />
-                                <div class="dropdown">
-                                    <label>Primeira habilidade</label>
-                                    <select class="form-control" style="overflow: hidden" name="PrimeiraHabilidade" id="PrimeiraHabilidade" ng-model="Contender.FirstSkillId" ng-init="LoadSkills()">
-                                        <option value="">Selecione </option>
-                                        <option ng-repeat="Skills in SkillList" value="{{Skills.Id}}">{{Skills.Name + "." + " Detalhe: " + Skills.Detail}} </option>
-                                    </select>
+                                <div class="col-lg-offset-4">
+                                    <button type="submit" class="btn btn-primary">Gravar</button>
                                 </div>
-                                <br />
-                                <div class="dropdown">
-                                    <label>Segunda habilidade</label>
-                                    <select class="form-control" style="overflow: hidden" name="SegundaHabilidade" id="SegundaHabilidade" ng-model="Contender.SecondSkillId" ng-init="LoadSkills()">
-                                        <option value="">Selecione </option>
-                                        <option ng-repeat="Skills in SkillList" value="{{Skills.Id}}">{{Skills.Name + "." + " Detalhe: " + Skills.Detail}} </option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-lg-offset-4">
-                                <button type="submit" class="btn btn-primary">Gravar</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                
+                            </form>
+                        </div>
+                    </div>}
+
                 <!-- /.container-fluid -->
             </div>
             <!-- /#page-wrapper -->
@@ -102,7 +80,7 @@
         <script src="/js/jquery.js"></script>
         <script src="/AngularControllers/js/angular.min.js"></script>
         <script src="/AngularControllers/js/angular-route.min.js"></script>
-        <script src="~/AngularControllers/js/RegisterContenderController.js"></script>
+        <script src="~/AngularControllers/js/ContenderManagementController.js"></script>
 
         <!-- Bootstrap Core JavaScript -->
         <script src="/js/bootstrap.min.js"></script>
