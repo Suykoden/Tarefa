@@ -335,6 +335,7 @@
     <Content Include="Views\Shared\ApplicationName.cshtml" />
     <Content Include="Views\Home\TeamManagement.cshtml" />
     <Content Include="Views\Home\ContenderEdit.cshtml" />
+    <Content Include="Views\Home\TournamentManagement.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NiboChallenge.Domain\NiboChallenge.Domain.csproj">

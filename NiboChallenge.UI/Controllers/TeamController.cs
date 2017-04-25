@@ -40,7 +40,7 @@ namespace NiboChallenge.UI.Controllers
         [HttpPost]
         public void Post([FromBody]TeamDTO teamDTO)
         {
-            //Persisting the team and conterders that belongs to ones team
+            //Persisting the Team and conterders that belongs to ones Team
             Team team = new Team
             {
                 Name = teamDTO.Name,
@@ -90,7 +90,7 @@ namespace NiboChallenge.UI.Controllers
         [HttpPut]
         public void Put(Team team)
         {
-            // set team false
+            // set Team false
             team.Active = false;
             _teamAppService.Update(team);
         }

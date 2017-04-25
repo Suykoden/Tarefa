@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html ng-app="app" lang="pt-br">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Torneios de Valoran</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/css/sb-admin.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="/css/plugins/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    >
+</head>
+
+<body ng-controller="ContenderManagementController">
+    <div id="wrapper">
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.Partial("ApplicationName");
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav">
+                <!--Rafael Damasio: Left this space in case o need insert some element for exemplo a search bar-->
+            </ul>
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            @Html.Partial("MenuLateral");
+            <!-- /.navbar-collapse -->
+        </nav>
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                            Gerenciamento de torneio
+                        </h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2">
+                        <form name="FormAddContender" ng-model="FormAddTournament" ng-submit="Save()">
+                            <div class="form-group">
+                                <label>Time A</label>
+                                <input class="form-control" placeholder="Nome do jogador" ng-model="Contender.Name">
+                                <br />
+                                <div class="dropdown">
+                                    <label>Classe</label>
+                                    <select class="form-control" style="overflow: hidden" name="ClasseCampeao" id="ClasseCampeao" ng-model="Contender.ContenderCategoryId" ng-init="LoadCategories()">
+                                        <option value="">Selecione </option>
+                                        <option ng-repeat="Categories in ContenderCategoriesList" value="{{Categories.Id}}">{{Categories.Name}} </option>
+                                    </select>
+                                </div>
+                                <br />
+                                <div class="dropdown">
+                                    <label>Time B</label>
+                                    <select class="form-control" style="overflow: hidden" name="PrimeiraHabilidade" id="PrimeiraHabilidade" ng-model="Contender.FirstSkillId" ng-init="LoadSkills()">
+                                        <option value="">Selecione </option>
+                                        <option ng-repeat="Skills in SkillList" value="{{Skills.Id}}">{{Skills.Name + "." + " Detalhe: " + Skills.Detail}} </option>
+                                    </select>
+                                </div>
+                                <br />
+                                <div class="dropdown">
+                                    <label>Time C</label>
+                                    <select class="form-control" style="overflow: hidden" name="SegundaHabilidade" id="SegundaHabilidade" ng-model="Contender.SecondSkillId" ng-init="LoadSkills()">
+                                        <option value="">Selecione </option>
+                                        <option ng-repeat="Skills in SkillList" value="{{Skills.Id}}">{{Skills.Name + "." + " Detalhe: " + Skills.Detail}} </option>
+                                    </select>
+                                </div>
+                                <div class="dropdown">
+                                    <label>Time D</label>
+                                    <select class="form-control" style="overflow: hidden" name="SegundaHabilidade" id="SegundaHabilidade" ng-model="Contender.SecondSkillId" ng-init="LoadSkills()">
+                                        <option value="">Selecione </option>
+                                        <option ng-repeat="Skills in SkillList" value="{{Skills.Id}}">{{Skills.Name + "." + " Detalhe: " + Skills.Detail}} </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-offset-4">
+                                <button type="submit" class="btn btn-primary">Gravar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <hr />
+                        <h2>Eliminatorias</h2>
+                        <div class="table-responsive">
+                            <table class="table table-hover table-striped">
+                                <thead>
+                                    <tr>
+                                        <th ng-click="OrderData('Name')"> Time A</th>
+                                        <th ng-click="OrderData('RegisterDateTime')">Time B</th>
+                                        <th ng-click="OrderData('Victory')">Vencedor</th>
+                                        <th ng-click="OrderData('Defeat')">Derrotas</th>
+                                    </tr>
+                                </thead>
+                                <tbody ng-init="LoadContenders()">
+
+                                    <tr ng-repeat="contenders in ContendersList | orderBy: Ordernation">
+                                        <td>{{contenders.Name}}</td>
+                                        <td>{{contenders.RegisterDateTime |date:'dd/MM/yyyy' }}</td>
+                                        <td>{{contenders.Victory}}</td>
+                                        <td>{{contenders.Defeat}}</td>
+                                        <td>
+                                            <!--Not working for while, not passing de parameter id to another view. Todo: Find a way to do this properly-->
+                                            <!--<button type="submit" class="btn btn-success" ng-click="EditContender(contenders.Id)">Editar</button>-->
+                                            <button type="submit" class="btn btn-danger" ng-click="DeleteContender(contenders)">Excluir</button>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- /#page-wrapper -->
+        </div>
+        <!-- /#wrapper -->
+        <!-- jQuery  and Angular -->
+        <script src="/js/jquery.js"></script>
+        <script src="/AngularControllers/js/angular.min.js"></script>
+        <script src="/AngularControllers/js/angular-route.min.js"></script>
+        <script src="~/AngularControllers/js/ContenderManagementController.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="/js/bootstrap.min.js"></script>
+
+        <!-- Morris Charts JavaScript -->
+        <script src="/js/plugins/morris/raphael.min.js"></script>
+        <script src="/js/plugins/morris/morris.min.js"></script>
+        <script src="/js/plugins/morris/morris-data.js"></script>
+    </div>
+</body>
+
+</html>
