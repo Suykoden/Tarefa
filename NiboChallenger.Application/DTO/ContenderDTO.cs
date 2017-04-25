@@ -11,7 +11,7 @@ namespace NiboChallenger.Application.DTO
     {
         public int Victory { get; set; }
         public int Defeat { get; set; }
-        public bool Ativo { get; set; }
+        public bool Active { get; set; }
         public DateTime RegisterDateTime { get; set; }
         public Guid ContenderCategoryId { get; set; }
         public Guid FirstSkillId { get; set; }

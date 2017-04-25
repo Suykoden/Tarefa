@@ -225,7 +225,7 @@
     <Content Include="AngularControllers\js\angular-route.min.js" />
     <Content Include="AngularControllers\js\angular-sanitize.js" />
     <Content Include="AngularControllers\js\angular.min.js" />
-    <Content Include="AngularControllers\js\RegisterTeamController.js" />
+    <Content Include="AngularControllers\js\TeamManagementController.js" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -333,7 +333,7 @@
     <Content Include="Views\Shared\MenuLateral.cshtml" />
     <Content Include="Views\Home\ContenderManagement.cshtml" />
     <Content Include="Views\Shared\ApplicationName.cshtml" />
-    <Content Include="Views\Home\TeamRegister.cshtml" />
+    <Content Include="Views\Home\TeamManagement.cshtml" />
     <Content Include="Views\Home\ContenderEdit.cshtml" />
   </ItemGroup>
   <ItemGroup>

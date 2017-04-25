@@ -58,8 +58,6 @@ app.controller("ContenderManagementController", function ($scope, $http, $locati
             console.log(data);
             $scope.dados = data;
             $scope.ContendersList = data;
-
-
         })
          .error(function () {
              alert("Não foi possível carregar os dados");

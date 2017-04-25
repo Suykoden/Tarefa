@@ -19,7 +19,7 @@ namespace NiboChallenge.UI.Controllers
             return View();
         }
 
-        public ActionResult TeamRegister()
+        public ActionResult TeamManagement()
         {
             return View();
         }

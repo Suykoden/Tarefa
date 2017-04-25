@@ -11,7 +11,7 @@ namespace NiboChallenge.Domain.Entities
     {
         public int Victory { get; set; }
         public int Defeat { get; set; }
-        public bool Ativo { get; set; }
+        public bool Active { get; set; }
         public DateTime RegisterDateTime { get; set; }
         public Guid ContenderCategoryId { get; set; }
         public ContenderCategory ContenderCategory { get; set; }

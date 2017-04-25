@@ -92,6 +92,7 @@ namespace NiboChallenge.UI.App_Start
             kernel.Bind<ITeamAppService>().To<TeamAppService>();
             kernel.Bind<IContenderCategoryAppService>().To<ContenderCategoryAppService>();
             kernel.Bind<ISkillAppService>().To<SkillAppService>();
+            kernel.Bind<IContenderTeamService>().To<ContenderTeamService>();
 
             //Domain
             kernel.Bind(typeof(IServicoBase<>)).To(typeof(ServiceBase<>));
@@ -99,6 +100,7 @@ namespace NiboChallenge.UI.App_Start
             kernel.Bind<ITeamService>().To<TeamService>();
             kernel.Bind<IContenderCategoryService>().To<ContenderCategoryService>();
             kernel.Bind<ISkillService>().To<SkillService>();
+            kernel.Bind<IContenderTeamService>().To<ContenderTeamService>();
 
             //Repositories
             kernel.Bind(typeof(IRepositoryBase<>)).To(typeof(RepositoryBase<>));
@@ -106,6 +108,7 @@ namespace NiboChallenge.UI.App_Start
             kernel.Bind<ITeamRepository>().To<TeamRepository>();
             kernel.Bind<IContenderCategoryRepository>().To<ContenderCategoryRepository>();
             kernel.Bind<ISkillRepository>().To<SkillRepository>();
+            kernel.Bind<IContenderTeamRepository>().To<ContenderTeamRepository>();
         }
     }
 

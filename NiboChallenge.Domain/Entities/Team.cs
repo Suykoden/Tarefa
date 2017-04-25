@@ -10,6 +10,6 @@ namespace NiboChallenge.Domain.Entities
     public class Team : EntityWithCodeAndName
     {
         public DateTime RegisterDateTime { get; set; }
-        public bool Ativo { get; set; }
+        public bool Active { get; set; }
     }
 }

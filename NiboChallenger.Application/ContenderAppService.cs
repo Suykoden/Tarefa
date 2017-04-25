@@ -30,13 +30,13 @@ namespace NiboChallenger.Application
             return (from c in _Contenders
                     join ct in _Category on c.ContenderCategoryId equals ct.Id
 
-                    where (c.Ativo == true)
+                    where (c.Active == true)
                     select new ContenderDTO()
                     {
                         Id = c.Id,
                         Name = c.Name,
                         CategoryName = ct.Name,
-                        Ativo = c.Ativo,
+                        Active = c.Active,
                         Victory = c.Victory,
                         Defeat = c.Defeat,
                         RegisterDateTime = c.RegisterDateTime,

@@ -41,7 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ContenderCategoryAppService.cs" />
+    <Compile Include="ContenderTeamAppService.cs" />
     <Compile Include="DTO\ContenderDTO.cs" />
+    <Compile Include="DTO\TeamDTO.cs" />
+    <Compile Include="Interface\IContenderTeamAppService.cs" />
     <Compile Include="SkillAppService.cs" />
     <Compile Include="Interface\IAppServiceBase.cs" />
     <Compile Include="Interface\IContenderCategoryAppService.cs" />

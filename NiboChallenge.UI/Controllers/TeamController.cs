@@ -4,7 +4,9 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using Microsoft.Ajax.Utilities;
 using NiboChallenge.Domain.Entities;
+using NiboChallenger.Application.DTO;
 using NiboChallenger.Application.Interface;
 
 namespace NiboChallenge.UI.Controllers
@@ -12,17 +14,20 @@ namespace NiboChallenge.UI.Controllers
     public class TeamController : ApiController
     {
         private readonly ITeamAppService _teamAppService;
+       // private readonly IContenderTeamAppService _contenderTeamAppService;
 
         public TeamController(ITeamAppService teamAppService)
         {
             _teamAppService = teamAppService;
+      //      _contenderTeamAppService = contenderTeamAppService;
         }
 
 
         // GET: api/Team
         public IEnumerable<Team> Get()
         {
-            return _teamAppService.GetAll();
+            // returning only the teams that are
+            return _teamAppService.GetAll().Where(t => t.Active = true);
         }
 
         // GET: api/Team/5
@@ -32,17 +37,62 @@ namespace NiboChallenge.UI.Controllers
         }
 
         // POST: api/Team
-        public void Post([FromBody]Team team)
+        [HttpPost]
+        public void Post([FromBody]TeamDTO teamDTO)
         {
-            team.Id = Guid.NewGuid();
-            team.Ativo = true;
-            team.RegisterDateTime = DateTime.Now;
+            //Persisting the team and conterders that belongs to ones team
+            Team team = new Team
+            {
+                Name = teamDTO.Name,
+                Id = Guid.NewGuid(),
+                RegisterDateTime = DateTime.Now,
+                Active = true
+            };
             _teamAppService.Add(team);
+
+            //This should be done with a list, sent by the view, but the angularJS was provoking errors, them made this way temporaly
+            if (teamDTO.FirstContenderId != Guid.Empty)
+            {
+                ContendersTeam ct = new ContendersTeam
+                {
+                    Id = Guid.NewGuid(),
+                    ContenderId = teamDTO.FirstContenderId,
+                    TeamId = team.Id
+                };
+         //       _contenderTeamAppService.Add(ct);
+            }
+            if (teamDTO.SecondContenderId != Guid.Empty)
+            {
+                ContendersTeam ct = new ContendersTeam
+                {
+                    Id = Guid.NewGuid(),
+                    ContenderId = teamDTO.SecondContenderId,
+                    TeamId = team.Id
+                };
+      //          _contenderTeamAppService.Add(ct);
+            }
+
+            if (teamDTO.ThirdContenderId != Guid.Empty)
+            {
+                ContendersTeam ct = new ContendersTeam
+                {
+                    Id = Guid.NewGuid(),
+                    ContenderId = teamDTO.ThirdContenderId,
+                    TeamId = team.Id
+                };
+          //      _contenderTeamAppService.Add(ct);
+            }
+
+
+
         }
 
-        // PUT: api/Team/5
-        public void Put(int id, [FromBody]string value)
+        [HttpPut]
+        public void Put(Team team)
         {
+            // set team false
+            team.Active = false;
+            _teamAppService.Update(team);
         }
 
         // DELETE: api/Team/5
