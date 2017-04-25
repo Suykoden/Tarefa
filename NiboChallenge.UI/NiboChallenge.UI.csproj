@@ -334,6 +334,7 @@
     <Content Include="Views\Home\ContenderRegister.cshtml" />
     <Content Include="Views\Shared\ApplicationName.cshtml" />
     <Content Include="Views\Home\TeamRegister.cshtml" />
+    <Content Include="Views\Home\ContenderEdit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NiboChallenge.Domain\NiboChallenge.Domain.csproj">

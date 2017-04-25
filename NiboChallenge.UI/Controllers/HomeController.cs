@@ -23,6 +23,12 @@ namespace NiboChallenge.UI.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public ActionResult ContenderEdit(int id)
+        {
+            return View();
+        }
     }
 }
 
