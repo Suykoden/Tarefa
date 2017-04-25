@@ -14,7 +14,7 @@ namespace NiboChallenge.UI.Controllers
         }
 
 
-        public ActionResult ContenderRegister()
+        public ActionResult ContenderManagementController()
         {
             return View();
         }

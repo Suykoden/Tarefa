@@ -1,5 +1,5 @@
 ﻿var app = angular.module("app", []);
-app.controller("RegisterContenderController", function ($scope, $http) {
+app.controller("ContenderManagementController", function ($scope, $http) {
     $scope.FormAddContender = {};
     $scope.Save = function () {
 
