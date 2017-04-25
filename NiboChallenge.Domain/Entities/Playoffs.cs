@@ -12,5 +12,7 @@ namespace NiboChallenge.Domain.Entities
         public Guid TeamId { get; set; }
         public Team Team { get; set; }
         public bool Finished { get; set; }
+        public Guid TournamentId { get; set; }
+        public  Tournament Tournament { get; set; }
     }
 }

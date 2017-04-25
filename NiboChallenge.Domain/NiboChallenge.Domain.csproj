@@ -51,6 +51,7 @@
     <Compile Include="Entities\Team.cs" />
     <Compile Include="Entities\Skill.cs" />
     <Compile Include="Entities\TeamKing.cs" />
+    <Compile Include="Entities\Tournament.cs" />
     <Compile Include="Entities\TournamentFinal.cs" />
     <Compile Include="Interfaces\Repositories\IContederTeamRepository.cs" />
     <Compile Include="Interfaces\Repositories\IContenderCategoryRepository.cs" />

@@ -214,6 +214,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ContenderController.cs" />
     <Compile Include="Controllers\TeamController.cs" />
+    <Compile Include="Controllers\TournamentController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -226,6 +227,7 @@
     <Content Include="AngularControllers\js\angular-sanitize.js" />
     <Content Include="AngularControllers\js\angular.min.js" />
     <Content Include="AngularControllers\js\TeamManagementController.js" />
+    <Content Include="AngularControllers\js\TournamentManagementController.js" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
