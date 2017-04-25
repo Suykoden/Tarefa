@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NiboChallenger.SeedWork.DTO;
 
-namespace NiboChallenger.Infra.DTO
+namespace NiboChallenger.Application.DTO
 {
-    public class ContenderView
+    public class ContenderDTO : DtoWithName
     {
         public int Victory { get; set; }
         public int Defeat { get; set; }
@@ -15,5 +16,8 @@ namespace NiboChallenger.Infra.DTO
         public Guid ContenderCategoryId { get; set; }
         public Guid FirstSkillId { get; set; }
         public Guid SecondSkillId { get; set; }
+        public string FirstSkillName { get; set; }
+        public string SecondSkillName { get; set; }
+        public string CategoryName { get; set; }
     }
 }

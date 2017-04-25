@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using NiboChallenge.Domain.Entities;
 using NiboChallenge.Domain.Interfaces.Repositories;
 using NiboChallenger.Infra.Context;
-using NiboChallenger.Infra.DTO;
 
 namespace NiboChallenger.Infra.Repositories
 {

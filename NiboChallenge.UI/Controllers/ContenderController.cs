@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Web.Http;
 using NiboChallenge.Domain.Entities;
 using NiboChallenger.Application.Interface;
+using NiboChallenger.Application.DTO;
 
 namespace NiboChallenge.UI.Controllers
 {
@@ -18,10 +19,10 @@ namespace NiboChallenge.UI.Controllers
             _contenderAppServicecompetidorAppService = contenderAppService;
         }
         // GET: api/Contender
-        public IEnumerable<Contender> Get()
+        public IEnumerable<ContenderDTO> Get()
         {
 
-            return _contenderAppServicecompetidorAppService.GetAll();
+            return _contenderAppServicecompetidorAppService.GetContenderDetailed();
         }
 
         // GET: api/Contender/5

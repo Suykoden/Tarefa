@@ -66,4 +66,9 @@ app.controller("RegisterContenderController", function ($scope, $http) {
 
 
     }
+
+    $scope.OrderData = function (Order) {
+    
+        $scope.Ordernation = Order;
+    }
 });

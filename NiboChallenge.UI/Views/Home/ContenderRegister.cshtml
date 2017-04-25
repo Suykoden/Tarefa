@@ -57,9 +57,9 @@
                         </h1>
                     </div>
                 </div>
-                <div class="row" >
+                <div class="row">
                     <div class="col-lg-2">
-                        <form name="FormAddContender"  ng-model ="FormAddContender" ng-submit="Save()">
+                        <form name="FormAddContender" ng-model="FormAddContender" ng-submit="Save()">
                             <div class="form-group">
                                 <label>Nome</label>
                                 <input class="form-control" placeholder="Nome do jogador" ng-model="Contender.Name">
@@ -94,7 +94,7 @@
                         </form>
                     </div>
                 </div>
-                <div class="row" >
+                <div class="row">
                     <div class="col-lg-12">
                         <hr />
                         <h2>Competidores cadastrados</h2>
@@ -102,25 +102,25 @@
                             <table class="table table-hover table-striped">
                                 <thead>
                                     <tr>
-                                        <th>Nome</th>
-                                        <th>Vitorias</th>
-                                        <th>Derrotas</th>
-                                        <th>Primeira habilidade</th>
-                                        <th>Segunda habilidade</th>
+                                        <th ng-click="OrderData('Name')"></th>
+                                        <th ng-click="OrderData('RegisterDateTime')">Data cadastro</th>
+                                        <th ng-click="OrderData('Victory')">Vitorias</th>
+                                        <th ng-click="OrderData('Defeat')">Derrotas</th>
                                     </tr>
                                 </thead>
-                                <tbody ng-init="LoadContenders()" >
+                                <tbody ng-init="LoadContenders()">
 
-                                    <tr ng-repeat="contenders in ContendersList">
+                                    <tr ng-repeat="contenders in ContendersList | orderBy: Ordernation">
                                         <td>{{contenders.Name}}</td>
+                                        <td>{{contenders.RegisterDateTime |date:'dd/MM/yyyy' }}</td>
                                         <td>{{contenders.Victory}}</td>
                                         <td>{{contenders.Defeat}}</td>
                                         <td>
-                                            <button type="submit" class="btn btn-success" >Editar</button>
+                                            <button type="submit" class="btn btn-success">Editar</button>
                                             <button type="submit" class="btn btn-danger">Excluir</button>
                                         </td>
                                     </tr>
-                                      
+
                                 </tbody>
                             </table>
                         </div>
