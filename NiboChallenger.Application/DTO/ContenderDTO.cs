@@ -18,6 +18,6 @@ namespace NiboChallenger.Application.DTO
         public Guid SecondSkillId { get; set; }
         public string FirstSkillName { get; set; }
         public string SecondSkillName { get; set; }
-        public string CategoryName { get; set; }
+        public string  CategoryName { get; set; }
     }
 }
