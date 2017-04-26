@@ -12,7 +12,7 @@ namespace NiboChallenger.Application.DTO
         public Guid TournamentFinalId { get; set; }
         public String FirstTeamName { get; set; }
         public String SecondTeamName { get; set; }
-        public Guid TournamentId { get; set; }
+        public  Guid TournamentId { get; set; }
         public string WinnerName { get; set; }
 
     }
