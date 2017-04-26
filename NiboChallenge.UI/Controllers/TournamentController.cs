@@ -24,7 +24,7 @@ namespace NiboChallenge.UI.Controllers
         // GET: api/Tournament
         public IEnumerable<Tournament> Get()
         {
-            return _tournamentAppService.GetAll().Where(t => t.Active == true);
+            return _tournamentAppService.GetAll().Where(t => t.Active == true && t.Status != "Iniciado");
         }
 
         // GET: api/Tournament/5
@@ -39,6 +39,7 @@ namespace NiboChallenge.UI.Controllers
             tournament.Id = Guid.NewGuid();
             tournament.RegisterDateTime = DateTime.Now;
             tournament.Active = true;
+            tournament.Status = "Aguardando inicio";
             _tournamentAppService.Add(tournament);
         }
 
@@ -46,6 +47,13 @@ namespace NiboChallenge.UI.Controllers
         public void Put(Tournament tournament)
         {
             tournament.Active = false;
+            _tournamentAppService.Update(tournament);
+        }
+        [HttpPost]
+        [Route("home/api/{Tournament}/Update")]
+        public void UpdateStatus(Tournament tournament)
+        {
+            tournament.Status = "Iniciado";
             _tournamentAppService.Update(tournament);
         }
 

@@ -33,6 +33,11 @@ namespace NiboChallenge.UI.Controllers
             return View();
         }
 
+        public ActionResult TournamentControl()
+        {
+            return View();
+        }
+
     }
 }
 

@@ -210,6 +210,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\ContenderCategoryController.cs" />
+    <Compile Include="Controllers\PlayOffController.cs" />
     <Compile Include="Controllers\SkillController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ContenderController.cs" />
@@ -338,6 +339,7 @@
     <Content Include="Views\Home\TeamManagement.cshtml" />
     <Content Include="Views\Home\ContenderEdit.cshtml" />
     <Content Include="Views\Home\TournamentManagement.cshtml" />
+    <Content Include="Views\Home\TournamentControl.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NiboChallenge.Domain\NiboChallenge.Domain.csproj">

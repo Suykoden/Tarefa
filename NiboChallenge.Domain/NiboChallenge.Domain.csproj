@@ -56,12 +56,14 @@
     <Compile Include="Interfaces\Repositories\IContederTeamRepository.cs" />
     <Compile Include="Interfaces\Repositories\IContenderCategoryRepository.cs" />
     <Compile Include="Interfaces\Repositories\IContenderRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IPlayOffRepository.cs" />
     <Compile Include="Interfaces\Repositories\ISkillRepository.cs" />
     <Compile Include="Interfaces\Repositories\IRepositoryBase.cs" />
     <Compile Include="Interfaces\Repositories\ITeamRepository.cs" />
     <Compile Include="Interfaces\Repositories\ITournamentRepository.cs" />
     <Compile Include="Interfaces\Services\IContenderCategoryService.cs" />
     <Compile Include="Interfaces\Services\IContenderTeamService.cs" />
+    <Compile Include="Interfaces\Services\IPlayOffService.cs" />
     <Compile Include="Interfaces\Services\ISkillService.cs" />
     <Compile Include="Interfaces\Services\IContenderService.cs" />
     <Compile Include="Interfaces\Services\IServiceBase.cs" />
@@ -71,10 +73,11 @@
     <Compile Include="Services\ContenderCategoryService.cs" />
     <Compile Include="Services\ContenderService.cs" />
     <Compile Include="Services\ContenderTeamService.cs" />
+    <Compile Include="Services\PlayOffService.cs" />
     <Compile Include="Services\SkillService.cs" />
     <Compile Include="Services\ServiceBase.cs" />
     <Compile Include="Services\TeamService.cs" />
-    <Compile Include="Services\TournamentoService.cs" />
+    <Compile Include="Services\TournamentService.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -55,6 +55,7 @@
     <Compile Include="Repositories\ContenderCategoryRepository.cs" />
     <Compile Include="Repositories\ContenderRepository.cs" />
     <Compile Include="Repositories\ContenderTeamRepository.cs" />
+    <Compile Include="Repositories\PlayoffRepository.cs" />
     <Compile Include="Repositories\SkillRepository.cs" />
     <Compile Include="Repositories\RepositoryBase.cs" />
     <Compile Include="Repositories\TeamRepository.cs" />

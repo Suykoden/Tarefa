@@ -1,5 +1,5 @@
 ﻿var app = angular.module("app", []);
-app.controller("TournamentManagementController", function ($scope, $http) {
+app.controller("TournamentManagementController", function ($scope, $http, $window) {
 
     $scope.FormAddTournament = {};
 
@@ -44,4 +44,53 @@ app.controller("TournamentManagementController", function ($scope, $http) {
         });
 
     };
+
+    $scope.ManagerTournament = function () {
+        $http.post('/Home/TournamentControl')
+      .success(function (data) {
+          console.log(data);
+          $window.location = "TournamentControl";
+      })
+      .error(function (data, status, header, config) {
+          $scope.ResponseDetails = "Data: " + data +
+              "<hr />status: " + status;
+      });
+    }
+
+    $scope.LoadTeams = function () {
+        $http
+        .get("/api/Team")
+        .success(function (data) {
+            console.log(data);
+            $scope.TeamList = data;
+        })
+         .error(function () {
+             alert("Não foi possível carregar os dados");
+         });
+    };
+
+    $scope.AddTeamToPlayOffs = function (tournaments) {
+        $http.post('/api/PlayOff', tournaments)
+      .success(function (data) {
+          console.log(data);
+          $scope.UpdateTournamentStatus(tournaments);
+      })
+      .error(function (data, status, header, config) {
+          $scope.ResponseDetails = "Data: " + data +
+              "<hr />status: " + status;
+      });
+    }
+  
+    $scope.UpdateTournamentStatus = function (tournaments) {
+        $http.post('api/Tournament/Update', tournaments)
+      .success(function (data) {
+          console.log(data);
+          $scope.LoadTournaments();
+
+      })
+      .error(function (data, status, header, config) {
+          $scope.ResponseDetails = "Data: " + data +
+              "<hr />status: " + status;
+      });
+    }
 });

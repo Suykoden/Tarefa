@@ -58,30 +58,19 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-2">
-                        <form name="FormAddTournament" ng-model="FormAddTournament" ng-submit="SaveTournament()">
-                            <div class="form-group">
-                                <label>Nome torneio</label>
-                                <input class="form-control" placeholder="Nome torneio" ng-model="Tournament.Name">
-                                <br />
-                                <div class="col-lg-offset-4">
-                                    <button type="submit" class="btn btn-primary">Gravar</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="row">
                     <div class="col-lg-12">
                         <hr />
-                        <h2>Torneios em aberto <button type="submit" class="btn btn-primary" ng-click ="ManagerTournament()">Iniciar torneio(s)</button></h2>
+                        <h2>Torneios em aberto</h2>
                         <div class="table-responsive">
                             <table class="table table-hover table-striped">
                                 <thead>
                                     <tr>
                                         <th> Nome torneio</th>
                                         <th>Data registro</th>
-                                        <th>Status</th>
+                                        <th>Time 1</th>
+                                        <th>Time 2</th>
+                                        <th>Time 3</th>
+                                        <th>Time 4</th>
                                     </tr>
                                 </thead>
                                 <tbody ng-init="LoadTournaments()">
@@ -89,9 +78,41 @@
                                     <tr ng-repeat="tournaments in tournamentList">
                                         <td>{{tournaments.Name}}</td>
                                         <td>{{tournaments.RegisterDateTime |date:'dd/MM/yyyy' }}</td>
-                                        <td>{{tournaments.Status}}</td>
                                         <td>
-                                            <button type="submit" class="btn btn-danger" ng-click="DeleteTournament(tournaments)">Excluir</button>
+                                            <div class="dropdown">
+                                                <select class="form-control" style="overflow: hidden" name="ClasseCampeao" id="ClasseCampeao" ng-model="tournaments.FirstTeamId" ng-init="LoadTeams()">
+                                                    <option value="">Selecione </option>
+                                                    <option ng-repeat="Teams in TeamList" value="{{Teams.Id}}">{{Teams.Name}} </option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <select class="form-control" style="overflow: hidden" name="ClasseCampeao" id="ClasseCampeao" ng-model="tournaments.SecondTeamId" ng-init="LoadTeams()">
+                                                    <option value="">Selecione </option>
+                                                    <option ng-repeat="Teams in TeamList" value="{{Teams.Id}}">{{Teams.Name}} </option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <select class="form-control" style="overflow: hidden" name="ClasseCampeao" id="ClasseCampeao" ng-model="tournaments.ThirdTeamId" ng-init="LoadTeams()">
+                                                    <option value="">Selecione </option>
+                                                    <option ng-repeat="Teams in TeamList" value="{{Teams.Id}}">{{Teams.Name}} </option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <select class="form-control" style="overflow: hidden" name="ClasseCampeao" id="ClasseCampeao" ng-model="tournaments.FourthTeamId" ng-init="LoadCategories()">
+                                                    <option value="">Selecione </option>
+                                                    <option ng-repeat="Teams in TeamList" value="{{Teams.Id}}">{{Teams.Name}} </option>
+                                                </select>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <button type="submit" class="btn btn-warning" ng-click="AddTeamToPlayOffs(tournaments)">Adicionar Times</button>
                                         </td>
                                     </tr>
 

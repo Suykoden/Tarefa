@@ -7,12 +7,12 @@ using NiboChallenge.Domain.EntitiesBase;
 
 namespace NiboChallenge.Domain.Entities
 {
-    public class Playoffs:EntityBase
+    public class Playoffs : EntityBase
     {
         public Guid TeamId { get; set; }
         public Team Team { get; set; }
         public bool Finished { get; set; }
         public Guid TournamentId { get; set; }
-        public  Tournament Tournament { get; set; }
+        public Tournament Tournament { get; set; }
     }
 }
