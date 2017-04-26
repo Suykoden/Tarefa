@@ -75,7 +75,6 @@
                                     </tr>
                                 </thead>
                                 <tbody ng-init="LoadTournaments()">
-
                                     <tr ng-repeat="tournaments in tournamentList">
                                         <td>{{tournaments.Name}}</td>
                                         <td>{{tournaments.RegisterDateTime |date:'dd/MM/yyyy' }}</td>
@@ -111,12 +110,10 @@
                                                 </select>
                                             </div>
                                         </td>
-
                                         <td>
                                             <button type="submit" class="btn btn-warning" ng-click="AddTeamToPlayOffs(tournaments)">Adicionar Times</button>
                                         </td>
                                     </tr>
-
                                 </tbody>
                             </table>
                         </div>
@@ -126,7 +123,6 @@
                     <div class="col-lg-12">
                         <div class="page-header">
                             <h1>Eliminatórias</h1>
-
                         </div>
                         <form name="formAddFinals" ng-model="formAddFinals" ng-submit="SaveFinalTournament()" ng-init="LoadPlayOffTeam()">
                             <div class="row">
@@ -235,7 +231,7 @@
                         </div>
                     </div>
                 </form>
-                <div class="row">
+                <div class="row" ng-init="LoadWinners()">
                     <div class="col-lg-12">
                         <div class="page-header">
                             <h1>Rei de valoran</h1>
@@ -247,11 +243,13 @@
                                         <h3 class="panel-title"></h3>
                                     </div>
                                     <div class="panel-body">
-                                        Panel content
+                                        <h1>{{Winner.WinnerName}}</h1>
+                                        <button type="submit" class="btn btn-danger">Destronar</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <img src="http://img09.deviantart.net/95d4/i/2013/133/2/7/league_of_legends___sejuani_render_by_aliasear-d6540zf.png" alt="Smiley face" height="250" width="300">
                     </div>
                 </div>
                 <!-- /.container-fluid -->

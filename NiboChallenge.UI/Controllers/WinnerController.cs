@@ -24,9 +24,9 @@ namespace NiboChallenge.UI.Controllers
             _tournamentAppService = tournamentAppService;
         }
         // GET: api/Winner
-        public IEnumerable<string> Get()
+        public IEnumerable<Winner> Get()
         {
-            return new string[] { "value1", "value2" };
+            return _winnerAppService.GetAll();
         }
 
         // GET: api/Winner/5

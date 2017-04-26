@@ -101,9 +101,9 @@ app.controller("TournamentManagementController", function ($scope, $http, $windo
         SecondTeamName: "",
         ThirdTeamName: "",
         FourthTeamName: "",
-        TournamentId: "",
-
+        TournamentId: ""
     }
+
     $scope.LoadPlayOffTeam = function () {
         $http
         .get("/api/PlayOff")
@@ -141,7 +141,7 @@ app.controller("TournamentManagementController", function ($scope, $http, $windo
         TournamentFinalId: "",
         FirstTeamName: "",
         SecondTeamName: "",
-        TournamentId: "",
+        TournamentId: ""
 
     }
 
@@ -161,7 +161,6 @@ app.controller("TournamentManagementController", function ($scope, $http, $windo
          });
     };
 
-
     $scope.SaveWinner = function () {
         $http.post('/api/Winner', $scope.FinalTeam)
         .success(function (data) {
@@ -174,4 +173,21 @@ app.controller("TournamentManagementController", function ($scope, $http, $windo
         });
     };
 
+
+    $scope.Winner = {
+        WinnerName: ""
+    }
+
+    $scope.LoadWinners = function () {
+        $http
+        .get("/api/Winner")
+        .success(function (data) {
+            console.log(data);
+            $scope.Winner.WinnerName = data[0].WinnerName;
+          
+        })
+         .error(function () {
+             alert("Não foi possível carregar os dados");
+         });
+    };
 });
