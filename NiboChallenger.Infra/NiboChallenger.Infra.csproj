@@ -61,6 +61,7 @@
     <Compile Include="Repositories\TeamRepository.cs" />
     <Compile Include="Repositories\TournamentFinalRepository.cs" />
     <Compile Include="Repositories\TournamentRepository.cs" />
+    <Compile Include="Repositories\WinnerRepository.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -9,8 +9,6 @@ using NiboChallenger.Application.Interface;
 
 namespace NiboChallenger.Application
 {
-    
-
     public class TournamentFinalAppService : AppServiceBase<TournamentFinal>, ITournamentFinalAppService
     {
         private readonly ITournamentFinalService _tournamentFinalService;

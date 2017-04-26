@@ -152,8 +152,8 @@ app.controller("TournamentManagementController", function ($scope, $http, $windo
             console.log(data);
             $scope.FinalTeam.FirstTeamName = data[0].FirstTeamName;
             $scope.FinalTeam.SecondTeamName = data[0].SecondTeamName;
-            $scope.Play.TournamentId = data[0].TournamentId;
-            $scope.Play.TournamentFinalId = data[0].Id;
+            $scope.FinalTeam.TournamentId = data[0].TournamentId;
+            $scope.FinalTeam.TournamentFinalId = data[0].Id;
 
         })
          .error(function () {
@@ -163,10 +163,10 @@ app.controller("TournamentManagementController", function ($scope, $http, $windo
 
 
     $scope.SaveWinner = function () {
-        $http.post('/api/TournamentFinal/SaveFinalResult', $scope.Play)
+        $http.post('/api/Winner', $scope.FinalTeam)
         .success(function (data) {
             $scope.PostDataResponse = data;
-            $scope.LoadPlayOffTeam();
+            $scope.LoadFinalTournamentTeam();
         })
         .error(function (data, status, header, config) {
             $scope.ResponseDetails = "Data: " + data +
