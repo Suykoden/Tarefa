@@ -80,12 +80,13 @@ app.controller("TournamentManagementController", function ($scope, $http, $windo
               "<hr />status: " + status;
       });
     }
-  
+
     $scope.UpdateTournamentStatus = function (tournaments) {
         $http.post('api/Tournament/Update', tournaments)
       .success(function (data) {
           console.log(data);
           $scope.LoadTournaments();
+          $scope.LoadPlayOffTeam();
 
       })
       .error(function (data, status, header, config) {
@@ -93,4 +94,84 @@ app.controller("TournamentManagementController", function ($scope, $http, $windo
               "<hr />status: " + status;
       });
     }
+
+    $scope.Play = {
+        PlayOffId: "",
+        FirstTeamName: "",
+        SecondTeamName: "",
+        ThirdTeamName: "",
+        FourthTeamName: "",
+        TournamentId: "",
+
+    }
+    $scope.LoadPlayOffTeam = function () {
+        $http
+        .get("/api/PlayOff")
+        .success(function (data) {
+            console.log(data);
+            $scope.PlayOffTeam = data;
+            $scope.Play.FirstTeamName = data[0].FirstTeamName;
+            $scope.Play.SecondTeamName = data[0].SecondTeamName;
+            $scope.Play.ThirdTeamName = data[0].ThirdTeamName;
+            $scope.Play.FourthTeamName = data[0].FourthTeamName;
+            $scope.Play.TournamentId = data[0].TournamentId;
+            $scope.Play.PlayOffId = data[0].Id;
+
+        })
+         .error(function () {
+             alert("Não foi possível carregar os dados");
+         });
+    };
+
+
+    $scope.SaveFinalTournament = function () {
+        $http.post('/api/TournamentFinal', $scope.Play)
+        .success(function (data) {
+            $scope.PostDataResponse = data;
+            $scope.LoadPlayOffTeam();
+        })
+        .error(function (data, status, header, config) {
+            $scope.ResponseDetails = "Data: " + data +
+                "<hr />status: " + status;
+        });
+    };
+
+
+    $scope.FinalTeam = {
+        TournamentFinalId: "",
+        FirstTeamName: "",
+        SecondTeamName: "",
+        TournamentId: "",
+
+    }
+
+    $scope.LoadFinalTournamentTeam = function () {
+        $http
+        .get("/api/TournamentFinal")
+        .success(function (data) {
+            console.log(data);
+            $scope.FinalTeam.FirstTeamName = data[0].FirstTeamName;
+            $scope.FinalTeam.SecondTeamName = data[0].SecondTeamName;
+            $scope.Play.TournamentId = data[0].TournamentId;
+            $scope.Play.TournamentFinalId = data[0].Id;
+
+        })
+         .error(function () {
+             alert("Não foi possível carregar os dados");
+         });
+    };
+
+
+    $scope.SaveWinner = function () {
+        $http.post('/api/TournamentFinal/SaveFinalResult', $scope.Play)
+        .success(function (data) {
+            $scope.PostDataResponse = data;
+            $scope.LoadPlayOffTeam();
+        })
+        .error(function (data, status, header, config) {
+            $scope.ResponseDetails = "Data: " + data +
+                "<hr />status: " + status;
+        });
+    };
+
 });

@@ -61,6 +61,7 @@
     <Compile Include="Interfaces\Repositories\IRepositoryBase.cs" />
     <Compile Include="Interfaces\Repositories\ITeamRepository.cs" />
     <Compile Include="Interfaces\Repositories\ITournamentRepository.cs" />
+    <Compile Include="Interfaces\Repositories\ITournamentFinalRepository.cs" />
     <Compile Include="Interfaces\Services\IContenderCategoryService.cs" />
     <Compile Include="Interfaces\Services\IContenderTeamService.cs" />
     <Compile Include="Interfaces\Services\IPlayOffService.cs" />
@@ -68,6 +69,7 @@
     <Compile Include="Interfaces\Services\IContenderService.cs" />
     <Compile Include="Interfaces\Services\IServiceBase.cs" />
     <Compile Include="Interfaces\Services\ITeamService.cs" />
+    <Compile Include="Interfaces\Services\ITournamentFinalService.cs" />
     <Compile Include="Interfaces\Services\ITournamentService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ContenderCategoryService.cs" />
@@ -77,6 +79,7 @@
     <Compile Include="Services\SkillService.cs" />
     <Compile Include="Services\ServiceBase.cs" />
     <Compile Include="Services\TeamService.cs" />
+    <Compile Include="Services\TournamentFinalService.cs" />
     <Compile Include="Services\TournamentService.cs" />
   </ItemGroup>
   <ItemGroup />

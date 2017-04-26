@@ -95,6 +95,7 @@ namespace NiboChallenge.UI.App_Start
             kernel.Bind<IContenderTeamAppService>().To<ContenderTeamAppService>();
             kernel.Bind<ITournamentAppService>().To<TournamentAppService>();
             kernel.Bind<IPlayoffAppService>().To<PlayoffAppService>();
+            kernel.Bind<ITournamentFinalAppService>().To<TournamentFinalAppService>();
 
             //Domain
             kernel.Bind(typeof(IServicoBase<>)).To(typeof(ServiceBase<>));
@@ -105,6 +106,7 @@ namespace NiboChallenge.UI.App_Start
             kernel.Bind<IContenderTeamService>().To<ContenderTeamService>();
             kernel.Bind<ITournamentService>().To<TournamenService>();
             kernel.Bind<IPlayOffService>().To<PlayOffService>();
+            kernel.Bind<ITournamentFinalService>().To<TournamentFinalService>();
 
             //Repositories
             kernel.Bind(typeof(IRepositoryBase<>)).To(typeof(RepositoryBase<>));
@@ -115,6 +117,7 @@ namespace NiboChallenge.UI.App_Start
             kernel.Bind<IContenderTeamRepository>().To<ContenderTeamRepository>();
             kernel.Bind<ITournamentRepository>().To<TournamentRepository>();
             kernel.Bind<IPlayOffRepository>().To<PlayoffRepository>();
+            kernel.Bind<ITournamentFinalRepository>().To<TournamentFinalRepository>();
         }
     }
 

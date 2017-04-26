@@ -7,8 +7,14 @@ using NiboChallenge.Domain.EntitiesBase;
 
 namespace NiboChallenge.Domain.Entities
 {
-   public class TournamentFinal: Playoffs
+   public class TournamentFinal: EntityBase
     {
+
+        public string FirstTeamName { get; set; }
+        public string SecondTeamName { get; set; }
+        public bool Finished { get; set; }
+        public Guid TournamentId { get; set; }
+        public Tournament Tournament { get; set; }
 
     }
 }

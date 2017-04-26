@@ -45,9 +45,11 @@
     <Compile Include="DTO\ContenderDTO.cs" />
     <Compile Include="DTO\PlayOffDTO.cs" />
     <Compile Include="DTO\TeamDTO.cs" />
+    <Compile Include="DTO\TournamentFinalDTO.cs" />
     <Compile Include="Interface\IPlayoffAppService.cs" />
     <Compile Include="Interface\IContenderTeamAppService.cs" />
     <Compile Include="Interface\ITournamentAppService.cs" />
+    <Compile Include="Interface\ITournamentFinalAppService.cs" />
     <Compile Include="PlayoffAppService.cs" />
     <Compile Include="SkillAppService.cs" />
     <Compile Include="Interface\IAppServiceBase.cs" />
@@ -60,6 +62,7 @@
     <Compile Include="AppServiceBase.cs" />
     <Compile Include="TeamAppService.cs" />
     <Compile Include="TournamentAppService.cs" />
+    <Compile Include="TournamentFinalAppService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NiboChallenge.Domain\NiboChallenge.Domain.csproj">

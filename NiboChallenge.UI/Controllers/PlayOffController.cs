@@ -22,9 +22,9 @@ namespace NiboChallenge.UI.Controllers
         }
 
         // GET: api/PlayOff
-        public IEnumerable<string> Get()
+        public IEnumerable<Playoffs> Get()
         {
-            return new string[] { "value1", "value2" };
+            return _playofffAppService.GetAll().Where(p => p.Finished == false);
         }
 
         // GET: api/PlayOff/5
@@ -36,12 +36,12 @@ namespace NiboChallenge.UI.Controllers
         // POST: api/PlayOff
         public void Post(Playoffs playoff)
         {
-            ///Happens because from angular it cames from object: tournament, and fills the id with tournament id, but here
+            //Inversion of id Happens because from angular it cames from object: tournament, and fills the id with tournament id, but here
             //we are dealing with Playoff object, could be corrected with a hidden property or something
             playoff.TournamentId = playoff.Id;
             playoff.Id = Guid.NewGuid();
+            playoff.Finished = false;
             _playofffAppService.Add(playoff);
-
         }
 
         // PUT: api/PlayOff/5

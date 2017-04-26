@@ -9,8 +9,7 @@ namespace NiboChallenge.Domain.Entities
 {
     public class TeamKing:EntityBase
     {
-        public Guid TeamId { get; set; }
-        public Team Team { get; set; }
+        public string WinnerTeamName { get; set; }
         public  bool Active { get; set; }
         public DateTime DateRegister { get; set; }
     }

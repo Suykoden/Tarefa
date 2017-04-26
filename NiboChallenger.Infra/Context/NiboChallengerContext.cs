@@ -25,6 +25,7 @@ namespace NiboChallenger.Infra.Context
         public DbSet<ContendersTeam> ContendersTeams { get; set; }
         public DbSet<Tournament> Tournaments { get; set; }
         public DbSet<Playoffs> Playoffs { get; set; }
+        public DbSet<TournamentFinal> TournamentFinals { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
