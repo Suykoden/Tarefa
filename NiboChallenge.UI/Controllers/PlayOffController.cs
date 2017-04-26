@@ -44,14 +44,6 @@ namespace NiboChallenge.UI.Controllers
             _playofffAppService.Add(playoff);
         }
 
-        // PUT: api/PlayOff/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE: api/PlayOff/5
-        public void Delete(int id)
-        {
-        }
+     
     }
 }

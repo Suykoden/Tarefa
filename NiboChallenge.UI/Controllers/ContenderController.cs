@@ -13,17 +13,16 @@ namespace NiboChallenge.UI.Controllers
     public class ContenderController : ApiController
     {
         private readonly IContenderAppService _contenderAppServicecompetidorAppService;
-     
+
 
         public ContenderController(IContenderAppService contenderAppService)
         {
             _contenderAppServicecompetidorAppService = contenderAppService;
-            
+
         }
         // GET: api/Contender
         public IEnumerable<ContenderDTO> Get()
         {
-
             return _contenderAppServicecompetidorAppService.GetContenderDetailed();
         }
 
@@ -37,6 +36,7 @@ namespace NiboChallenge.UI.Controllers
         // POST: api/Contender
         public void Post(Contender contender)
         {
+            //Adding a new conteder
             contender.Id = Guid.NewGuid();
             contender.RegisterDateTime = DateTime.Now;
             contender.Active = true;
@@ -47,13 +47,11 @@ namespace NiboChallenge.UI.Controllers
         [HttpPut]
         public void DeleteContender(Contender contender)
         {
+            //Flags contender to active false, filtering on de select
             contender.Active = false;
             _contenderAppServicecompetidorAppService.Update(contender);
         }
 
-        // DELETE: api/Contender/5
-        public void Delete(int id)
-        {
-        }
+
     }
 }

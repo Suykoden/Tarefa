@@ -54,12 +54,12 @@
                         <form name="FormAddTeam" ng-submit="Save()">
                             <div class="form-group">
                                 <label>Nome</label>
-                                <input class="form-control" placeholder="Nome do time" ng-model="Team.Name">
+                                <input class="form-control" placeholder="Nome do time" ng-model="Team.Name" required>
                             </div>
                             <br />
                             <div class="dropdown">
                                 <label>Primeiro Competidor</label>
-                                <select class="form-control" style="overflow: hidden" name="ContenderTeam" id="FirstContenderTeam" ng-model="Team.FirstContenderId" ng-init="LoadContenders()">
+                                <select class="form-control" style="overflow: hidden" name="ContenderTeam" id="FirstContenderTeam" ng-model="Team.FirstContenderId" ng-init="LoadContenders()" required>
                                     <option value="">Selecione </option>
                                     <option ng-repeat="contender in ContendersList" value="{{contender.Id}}">{{contender.Name}} </option>
                                 </select>
@@ -67,7 +67,7 @@
                             <br />
                             <div class="dropdown">
                                 <label>Segundo Competidor</label>
-                                <select class="form-control" style="overflow: hidden" name="ContenderTeam" id="SecondContenderTeam" ng-model="Team.SecondContenderId" ng-init="LoadContenders()">
+                                <select class="form-control" style="overflow: hidden" name="ContenderTeam" id="SecondContenderTeam" ng-model="Team.SecondContenderId" ng-init="LoadContenders()" required>
                                     <option value="">Selecione </option>
                                     <option ng-repeat="contender in ContendersList" value="{{contender.Id}}">{{contender.Name}} </option>
                                 </select>
@@ -75,7 +75,7 @@
                             <br />
                             <div class="dropdown">
                                 <label>Terceiro Competidor</label>
-                                <select class="form-control" style="overflow: hidden" name="ContenderTeam" id="ThirdContenderTeam" ng-model="Team.ThirdContenderId" ng-init="LoadContenders()">
+                                <select class="form-control" style="overflow: hidden" name="ContenderTeam" id="ThirdContenderTeam" ng-model="Team.ThirdContenderId" ng-init="LoadContenders()" required>
                                     <option value="">Selecione </option>
                                     <option ng-repeat="contender in ContendersList" value="{{contender.Id}}">{{contender.Name}} </option>
                                 </select>

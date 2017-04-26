@@ -80,7 +80,7 @@
                                         <td>{{tournaments.RegisterDateTime |date:'dd/MM/yyyy' }}</td>
                                         <td>
                                             <div class="dropdown">
-                                                <select class="form-control" style="overflow: hidden" name="TournamentControl" id="TournamentControl" ng-model="tournaments.FirstTeamName" ng-init="LoadTeams()">
+                                                <select class="form-control" style="overflow: hidden" name="TournamentControl" id="TournamentControl" ng-model="tournaments.FirstTeamName" ng-init="LoadTeams()" required>
                                                     <option value="">Selecione </option>
                                                     <option ng-repeat="Teams in TeamList" value="{{Teams.Name}}">{{Teams.Name}} </option>
                                                 </select>
@@ -88,7 +88,7 @@
                                         </td>
                                         <td>
                                             <div class="dropdown">
-                                                <select class="form-control" style="overflow: hidden" name="TournamentControl" id="TournamentControl" ng-model="tournaments.SecondTeamName" ng-init="LoadTeams()">
+                                                <select class="form-control" style="overflow: hidden" name="TournamentControl" id="TournamentControl" ng-model="tournaments.SecondTeamName" ng-init="LoadTeams()" required>
                                                     <option value="">Selecione </option>
                                                     <option ng-repeat="Teams in TeamList" value="{{Teams.Name}}">{{Teams.Name}} </option>
                                                 </select>
@@ -96,7 +96,7 @@
                                         </td>
                                         <td>
                                             <div class="dropdown">
-                                                <select class="form-control" style="overflow: hidden" name="TournamentControl" id="TournamentControl" ng-model="tournaments.ThirdTeamName" ng-init="LoadTeams()">
+                                                <select class="form-control" style="overflow: hidden" name="TournamentControl" id="TournamentControl" ng-model="tournaments.ThirdTeamName" ng-init="LoadTeams()" required>
                                                     <option value="">Selecione </option>
                                                     <option ng-repeat="Teams in TeamList" value="{{Teams.Name}}">{{Teams.Name}} </option>
                                                 </select>
@@ -104,7 +104,7 @@
                                         </td>
                                         <td>
                                             <div class="dropdown">
-                                                <select class="form-control" style="overflow: hidden" name="TournamentControl" id="TournamentControl" ng-model="tournaments.FourthTeamName" ng-init="LoadCategories()">
+                                                <select class="form-control" style="overflow: hidden" name="TournamentControl" id="TournamentControl" ng-model="tournaments.FourthTeamName" ng-init="LoadCategories()" required>
                                                     <option value="">Selecione </option>
                                                     <option ng-repeat="Teams in TeamList" value="{{Teams.Name}}">{{Teams.Name}} </option>
                                                 </select>
@@ -146,7 +146,7 @@
                                     </div>
                                     <label>Vencedor chave A</label>
                                     <div class="dropdown">
-                                        <select class="form-control" style="overflow: hidden" name="TournamentControl" id="FirstWinner" ng-model="Play.FirstWinner" ng-init="LoadCategories()">
+                                        <select class="form-control" style="overflow: hidden" name="TournamentControl" id="FirstWinner" ng-model="Play.FirstWinner" ng-init="LoadCategories()" required>
                                             <option value="">Selecione </option>
                                             <option value="{{Play.FirstTeamName}}">{{Play.FirstTeamName}} </option>
                                             <option value="{{Play.SecondTeamName}}">{{Play.SecondTeamName}} </option>
@@ -175,7 +175,7 @@
                                     </div>
                                     <label>Vencedor chave B</label>
                                     <div class="dropdown">
-                                        <select class="form-control" style="overflow: hidden" name="TournamentControl" id="SecondWinner" ng-model="Play.SecondWinner">
+                                        <select class="form-control" style="overflow: hidden" name="TournamentControl" id="SecondWinner" ng-model="Play.SecondWinner" required>
                                             <option value="">Selecione </option>
                                             <option value="{{Play.ThirdTeamName}}">{{Play.ThirdTeamName}} </option>
                                             <option value="{{Play.FourthTeamName}}">{{Play.FourthTeamName}} </option>
@@ -216,7 +216,7 @@
                                     </div>
                                     <label>Vencedor da final </label>
                                     <div class="dropdown">
-                                        <select class="form-control" style="overflow: hidden" name="TournamentControl" id="Winner" ng-model="FinalTeam.WinnerName">
+                                        <select class="form-control" style="overflow: hidden" name="TournamentControl" id="Winner" ng-model="FinalTeam.WinnerName" required>
                                             <option value="">Selecione </option>
                                             <option value="{{FinalTeam.FirstTeamName}}">{{FinalTeam.FirstTeamName}} </option>
                                             <option value="{{FinalTeam.SecondTeamName}}">{{FinalTeam.SecondTeamName}} </option>
@@ -242,10 +242,12 @@
                                     <div class="panel-heading">
                                         <h3 class="panel-title"></h3>
                                     </div>
-                                    <div class="panel-body">
-                                        <h1>{{Winner.WinnerName}}</h1>
-                                        <button type="submit" class="btn btn-danger">Destronar</button>
-                                    </div>
+                                    <form ng-submit="MostPowerfullSkillOnWholeProject()">
+                                        <div class="panel-body">
+                                            <h1>{{Winner.WinnerName}}</h1>
+                                            <button type="submit" class="btn btn-danger" >Destronar</button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>

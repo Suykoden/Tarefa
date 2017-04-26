@@ -26,13 +26,7 @@ namespace NiboChallenge.UI.Controllers
         // GET: api/Winner
         public IEnumerable<Winner> Get()
         {
-            return _winnerAppService.GetAll();
-        }
-
-        // GET: api/Winner/5
-        public string Get(int id)
-        {
-            return "value";
+            return _winnerAppService.GetAll().Where(w => w.Active == true);
         }
 
         // POST: api/Winner
@@ -43,7 +37,9 @@ namespace NiboChallenge.UI.Controllers
             {
                 Id = Guid.NewGuid(),
                 DateRegister = DateTime.Now,
-                WinnerName = winner.WinnerName
+                WinnerName = winner.WinnerName,
+                Active = true
+
             };
             _winnerAppService.Add(win);
 
@@ -55,7 +51,7 @@ namespace NiboChallenge.UI.Controllers
                 SecondTeamName = winner.SecondTeamName,
                 TournamentId = winner.TournamentId,
                 Finished = true
-              
+
             };
             _tournamentFinalAppService.Update(final);
 
@@ -66,14 +62,16 @@ namespace NiboChallenge.UI.Controllers
             _tournamentAppService.Update(Tournament);
         }
 
-        // PUT: api/Winner/5
-        public void Put(int id, [FromBody]string value)
+
+        [HttpPost]
+        [Route("home/api/{Winner}/KillTheKing")]
+        public void KillTheKing(Winner winner)
         {
+            //Sets King off
+            var King = _winnerAppService.GetById(winner.Id);
+            King.Active = false;
+            _winnerAppService.Update(King);
         }
 
-        // DELETE: api/Winner/5
-        public void Delete(int id)
-        {
-        }
     }
 }

@@ -27,12 +27,6 @@ namespace NiboChallenge.UI.Controllers
             return _tournamentFinalAppService.GetAll().Where(t => t.Finished == false);
         }
 
-        // GET: api/TournamentFinal/5
-        public string Get(int id)
-        {
-            return "value";
-        }
-
         // POST: api/TournamentFinal
         [HttpPost]
         public void PostTournament(TournamentFinalDTO tournamentFinal)
@@ -61,18 +55,6 @@ namespace NiboChallenge.UI.Controllers
 
             //Update de status of playoffs to finished
             _playoffAppService.Update(play);
-        }
-
-
-        // PUT: api/TournamentFinal/5
-        public void Put(TournamentFinalDTO tournamentFinal)
-        {
-
-        }
-
-        // DELETE: api/TournamentFinal/5
-        public void Delete(int id)
-        {
         }
     }
 }

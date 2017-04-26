@@ -30,13 +30,7 @@ namespace NiboChallenge.UI.Controllers
             return _teamAppService.GetAll().Where(t => t.Active == true);
         }
 
-        // GET: api/Team/5
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST: api/Team
+       // POST: api/Team
         [HttpPost]
         public void Post([FromBody]TeamDTO teamDTO)
         {
@@ -82,9 +76,6 @@ namespace NiboChallenge.UI.Controllers
                 };
                 _contenderTeamAppService.Add(ct);
             }
-
-
-
         }
 
         [HttpPut]
@@ -94,10 +85,6 @@ namespace NiboChallenge.UI.Controllers
             team.Active = false;
             _teamAppService.Update(team);
         }
-
-        // DELETE: api/Team/5
-        public void Delete(int id)
-        {
-        }
+        
     }
 }

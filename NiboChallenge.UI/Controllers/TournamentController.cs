@@ -27,12 +27,6 @@ namespace NiboChallenge.UI.Controllers
             return _tournamentAppService.GetAll().Where(t => t.Active == true && t.Status != "Iniciado");
         }
 
-        // GET: api/Tournament/5
-        public string Get(int id)
-        {
-            return "value";
-        }
-
         // POST: api/Tournament
         public void Post([FromBody]Tournament tournament)
         {
@@ -57,9 +51,6 @@ namespace NiboChallenge.UI.Controllers
             _tournamentAppService.Update(tournament);
         }
 
-        // DELETE: api/Tournament/5
-        public void Delete(int id)
-        {
-        }
+       
     }
 }

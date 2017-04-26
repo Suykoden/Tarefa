@@ -128,7 +128,7 @@ app.controller("TournamentManagementController", function ($scope, $http, $windo
         $http.post('/api/TournamentFinal', $scope.Play)
         .success(function (data) {
             $scope.PostDataResponse = data;
-            $scope.LoadPlayOffTeam();
+            $scope.LoadFinalTournamentTeam();
         })
         .error(function (data, status, header, config) {
             $scope.ResponseDetails = "Data: " + data +
@@ -165,7 +165,7 @@ app.controller("TournamentManagementController", function ($scope, $http, $windo
         $http.post('/api/Winner', $scope.FinalTeam)
         .success(function (data) {
             $scope.PostDataResponse = data;
-            $scope.LoadFinalTournamentTeam();
+            $scope.LoadWinners();
         })
         .error(function (data, status, header, config) {
             $scope.ResponseDetails = "Data: " + data +
@@ -175,7 +175,8 @@ app.controller("TournamentManagementController", function ($scope, $http, $windo
 
 
     $scope.Winner = {
-        WinnerName: ""
+        WinnerName: "",
+        Id: ""
     }
 
     $scope.LoadWinners = function () {
@@ -184,10 +185,22 @@ app.controller("TournamentManagementController", function ($scope, $http, $windo
         .success(function (data) {
             console.log(data);
             $scope.Winner.WinnerName = data[0].WinnerName;
-          
+            $scope.Winner.Id = data[0].Id;
         })
          .error(function () {
              alert("Não foi possível carregar os dados");
          });
+    };
+
+    $scope.MostPowerfullSkillOnWholeProject = function () {
+        $http.post('api/Winner/KillTheKing', $scope.Winner)
+        .success(function (data) {
+            $scope.PostDataResponse = data;
+            $scope.LoadWinners();
+        })
+        .error(function (data, status, header, config) {
+            $scope.ResponseDetails = "Data: " + data +
+                "<hr />status: " + status;
+        });
     };
 });
