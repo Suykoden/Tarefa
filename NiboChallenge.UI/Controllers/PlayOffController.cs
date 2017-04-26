@@ -34,45 +34,13 @@ namespace NiboChallenge.UI.Controllers
         }
 
         // POST: api/PlayOff
-        public void Post(PlayOffDTO playoff)
+        public void Post(Playoffs playoff)
         {
-            //Todo: Refactoring, this isn't the rigth way make this, oath to be a list or something 
-
-            if (playoff.FirstTeamId != Guid.Empty)
-            {
-                Playoffs play = new Playoffs();
-                play.Id = Guid.NewGuid();
-                play.TournamentId = playoff.Id;
-                play.TeamId = playoff.FirstTeamId;
-                _playofffAppService.Add(play);
-            }
-
-            if (playoff.SecondTeamId != Guid.Empty)
-            {
-                Playoffs play = new Playoffs();
-                play.Id = Guid.NewGuid();
-                play.TournamentId = playoff.Id;
-                play.TeamId = playoff.SecondTeamId;
-                _playofffAppService.Add(play);
-            }
-
-            if (playoff.ThirdTeamId != Guid.Empty)
-            {
-                Playoffs play = new Playoffs();
-                play.Id = Guid.NewGuid();
-                play.TournamentId = playoff.Id;
-                play.TeamId = playoff.ThirdTeamId;
-                _playofffAppService.Add(play);
-            }
-
-            if (playoff.FourthTeamId != Guid.Empty)
-            {
-                Playoffs play = new Playoffs();
-                play.Id = Guid.NewGuid();
-                play.TournamentId = playoff.Id;
-                play.TeamId = playoff.FourthTeamId;
-                _playofffAppService.Add(play);
-            }
+            ///Happens because from angular it cames from object: tournament, and fills the id with tournament id, but here
+            //we are dealing with Playoff object, could be corrected with a hidden property or something
+            playoff.TournamentId = playoff.Id;
+            playoff.Id = Guid.NewGuid();
+            _playofffAppService.Add(playoff);
 
         }
 
